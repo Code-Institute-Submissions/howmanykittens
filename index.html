@@ -4,30 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!--bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/a8977c9238.js" crossorigin="anonymous"></script>
+
+    <!--style.css-->
    <link rel="stylesheet" href="css/style.css">
-   <title>How Many Kittens</title>
-    <h1>How Many Kittens?</h1>
-    <h2>The cutest way to visualise the amount of weight you have lost!</h2>
+
+   <title>How Many Kittens </title>
+    <nav class="navbar navbar-light" style="background-color: #FDC2D6;">
+    <a class="navbar-brand" href="#"><h1>How Many Kittens? <i class="fas fa-paw"></i></h1></a>
+
+  <!-- Navbar content -->
+  <h2><i>The cutest way to visualise the amount of weight you have lost!</i></h2>
+    </nav>
+    
+    
 
 </head>
 <body>
-<div class="container-fluid">
+<div class="container">
 <div class="row"><br><br><br></div>
 <div class="row">
         <div class="col-6">
          <h3>How much weight have you lost?</h3>
         </div>
         <div class="col-6">
-         <h3>That's ------- kittens!</h3>
+         <h3>That's {} kittens!</h3>
         </div>
 </div>
-<div class="howManyKittens">
 <!--Weight input number box-->
+<div class="howManyKittens">
+
 
 <div class="input-group col-6 offset-1">
-  <input type="number" class="form-control" aria-label="Text input with dropdown button">
+  <input type="number" class="form-control" aria-label="Number input with dropdown button">
   <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
     <option selected>Choose unit...</option>
     <option value="1">lbs</option>
