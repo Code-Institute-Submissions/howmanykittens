@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--bootstrap CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Source+Sans+Pro:300&display=swap" rel="stylesheet">
+	<!--bootstrap CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Source+Sans+Pro:300&display=swap"
+		rel="stylesheet">
 
 
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/a8977c9238.js" crossorigin="anonymous"></script>
+	<!--Font Awesome-->
+	<script src="https://kit.fontawesome.com/a8977c9238.js" crossorigin="anonymous"></script>
 
-    <!--style.css-->
-   <link rel="stylesheet" href="css/style.css">
+	<!--style.css-->
+	<link rel="stylesheet" href="css/style.css">
 
-   <title>How Many Kittens </title>
-    <nav class="navbar navbar-light" style="background-color: #FDC2D6;">
-    <a class="navbar-brand" href="#"><h1>How Many Kittens? <i class="fas fa-paw"></i></h1></a>
+	<!--Title-->
+	<title>How Many Kittens </title>
 
-  <!-- Navbar content -->
-  <h2><i>The cutest way to visualise the amount of weight you have lost!</i></h2>
-    </nav>
-    
-    
+	<!-- Navbar -->
+	<nav class="navbar navbar-light" style="background-color: #e3c3e7;">
+		<a class="navbar-brand" href="#">
+			<h1>How Many Kittens? <i class="fas fa-paw"></i></h1>
+		</a>
+
+
+		<h2><i>The cutest way to visualise the amount of weight you have lost!</i></h2>
+	</nav>
+
+
 
 </head>
+
 <body>
-<div class="container">
-<div class="row"><br><br><br></div>
 <div class="row">
-        <div class="col-6">
-         <h3>How much weight have you lost?</h3>
-        </div>
-        <div class="col-6">
-         <h3>That's {} kittens!</h3>
-        </div>
-</div>
-<!--Weight input number box-->
-<div class="howManyKittens">
+<div class="container-fluid">
+<div class="col">
+<p>When you are on a weight loss journey, it can be hard to visualise the progress you have made. How Many Kittens offers a fun solution to this problem! When you enter in the amount of weight you have lost, our "Catulator" converts it into kittens! 
+</div></div>
+	<div class="container">
+		<div class="row"><br><br><br></div>
+			<div class="row">
+				<div class="col-6">
+					<h3>How much weight have you lost?</h3>
+				</div>
+				<div class="col-6">
+					<h3>That's {} kittens!</h3>
+				</div>
+			</div>
+			<!--Weight input number box-->
+			<div class="howManyKittens">
 
 
-<div class="input-group col-6 offset-1">
-  <input type="number" class="form-control" aria-label="Number input with dropdown button">
-  <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-    <option selected>Choose unit...</option>
-    <option value="1">lbs</option>
-    <option value="2">grams</option>
-  </select>
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button">Button</button>
-  </div>
-</div>
-</div> </div>
-</container>
-<!--bootstrap JS-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+				<div class="input-group col-6 offset-1">
+					<input type="number" class="form-control" aria-label="Number input with dropdown button">
+					<select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+<option selected>Choose unit...</option>
+<option value="1">lbs</option>
+<option value="2">grams</option>
+</select>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button">Button</button>
+					</div>
+				</div>
+			</div>
+		</div>
+        </div>
+		
+		<!--bootstrap JS-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+		</script>
 </body>
+
 </html>

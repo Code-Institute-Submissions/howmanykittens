@@ -1,21 +1,32 @@
 body {
-    background-image: url("https://i.pinimg.com/originals/26/32/fe/2632febab88f0a375236e27f2c562384.jpg");
+    background-image: url("../../../img/Paws final 4.jpg");
     
 }   
+
+/*  headings  */
 h1 {
-    color: #fff;
+    color: #f5f7f3;
     font-family: 'Gloria Hallelujah', cursive;
     
 }
 
-.container {
-}
 h2 {
-font-family: 'Source Sans Pro', sans-serif; 
-color: #be9da8;
+font-family: 'Gloria Hallelujah', cursive; 
+color: #f5f7f3;
 }
 
 h3 {
   font-family: 'Source Sans Pro', sans-serif;  
   color: #a43f61;
+}
+
+/* Paragraphs */
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
 }
