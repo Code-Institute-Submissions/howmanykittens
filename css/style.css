@@ -7,28 +7,91 @@ body {
 h1 {
     color: #f5f7f3;
     font-family: 'Gloria Hallelujah', cursive;
-    
+    font-size: 32px;
 }
 
 h2 {
 font-family: 'Gloria Hallelujah', cursive; 
 color: #f5f7f3;
+font-size: 20px;
 }
 
 h3 {
   font-family: 'Source Sans Pro', sans-serif;  
-  color: #5E2466;
+  color: #E60088;
 }
 
 /* Paragraphs */
 
 p {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
-    color: #5E2466;
+    font-size: 14px;
+    color: #E60088;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
+    height: 500px;
+}
+
+button {
+    height: 38px;
+}
+ 
+.numberBoxRow{
+
+  min-height: 50%; 
+  align-items: center;
+}
+
+/* M E D I A  Q U E R I E S */
+
+    /* Small and above */
+@media (min-width: 576px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+    /* Medium and above */ 
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+    /* Large and above */ 
+@media (min-width: 992px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+}
+
+    /* Extra Large */
+@media (min-width 1200px) {
+
+    h1 {
+        font-size: 44px;
+    }   
+
+    h2 {
+        font-size: 36px;
+    }
 }
