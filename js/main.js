@@ -15,7 +15,7 @@ function toKittens() {
         kittenW = kittenWeightInKilograms;
     }
 
-    var kittens = parseInt( document.getElementById("weightLost").value ) / kittenW;
+    var kittens = parseInt(parseInt(document.getElementById("weightLost").value ) / kittenW);
     console.log(kittens);
     var text = `<h3 class="display-2">That's ${kittens} kittens!</h3>`;  
     document.getElementById("kittenResult").innerHTML = text;    
