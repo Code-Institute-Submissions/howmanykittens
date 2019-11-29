@@ -1,6 +1,4 @@
-var amountOfWeightLost = document.getElementById("weightLost");
-var kittenWeight = 0.5;
-var kittenWeightInKilograms = 0.226796;
+
 
 
 
@@ -8,9 +6,11 @@ var kittenWeightInKilograms = 0.226796;
 function toKittens() {
 
     var unit_selection = document.getElementById("inputGroupSelect04").value;
+    var kittenWeightInLb = 0.5;
+    var kittenWeightInKilograms = 0.226796;
 
     if (unit_selection == "lbs") {
-        kittenW = kittenWeight;
+        kittenW = kittenWeightInLb;
     } else if (unit_selection == "kg") {
         kittenW = kittenWeightInKilograms;
     }
