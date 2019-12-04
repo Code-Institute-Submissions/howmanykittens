@@ -56,6 +56,7 @@
 				<p>When you are on a weight loss journey, it can be hard to visualise the progress you have made. How
 					Many Kittens offers a fun solution to this problem! When you enter in the amount of weight you have
 					lost, our "Catulator" converts it into kittens!
+                </p>
 			</div>
         <!--/Introductory Paragraph Div-->
 		</div>
@@ -76,41 +77,31 @@
     </div>
     <!--/R O W  2-->
 
-    <!--R O W  3-->
-            <div class="row numberBoxRow">
-                        <!--Weight input number box div-->
-					<div class="input-group col-xs-6 col-md-6" id="weightEntry">
-						<input type="number" class="form-control" id="weightLost" aria-label="Number input with dropdown button">
-                        <!--Unit Select Dropdown-->
-						<select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                            <option selected>Unit</option>
-                            <option value="lbs">lbs</option>
-                            <option value="kg">kg</option>
-                        </select>
-                        <!--/Unit Select Dropdown-->
-                        <!--Go Button-->
-						<div class="input-group-append">
-							<button class="btn btn-outline-secondary" type="button" onclick="toKittens()">Go!</button>
-						</div>
-                        <!--/Go Button-->
-					</div>
-                    <div class="col-xs-12 col-md-6 " id= "kittenResult"></div>
-                        <!--/Weight input number box div-->
-            </div>
+      <!--R O W  3-->
+    <div class="row numberBoxRow">
+      <!--Weight input number box div-->
+      <div class="input-group col-xs-6 col-md-6" id="weightEntry">
+        <input type="number" class="form-control" id="weightLost" aria-label="Number input with dropdown button">
+        <!--Unit Select Dropdown-->
+        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Unit</option>
+          <option value="lbs">lbs</option>
+          <option value="kg">kg</option>
+        </select>
+        <!--/Unit Select Dropdown-->
+        <!--Go Button-->
+        <div class="input-group-append">
+          <button id="go" class="btn btn-outline-secondary" type="button">Go!</button>
+        </div>
+        <!--/Go Button-->
+      </div>
+      <div class="col-xs-12 col-md-6 " id="kittenResult"></div>
+      <!--/Weight input number box div-->
+    </div>
     <!--/R O W  3-->
 
-					
-                    
-					
-				</div>
-                </div>
-				
-				
-			</div>
-	
-
-		<!--bootstrap JS-->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	<!--bootstrap JS-->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -118,11 +109,11 @@
 		</script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-		</script>
+	 </script>
 
-        <!-- main.js-->
+    <!-- main.js-->
 
-        <script src="js/main.js"></script>
+     <script src="js/main.js"></script>
 </body>
 
 </html>
