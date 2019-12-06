@@ -43,8 +43,8 @@ function outputKittens(amount){
     for(var i = 0; i <amount; i++){
     (function(i){
         setTimeout(function(){
-            alert("KITTENS!");
-        }, 3000 * (i + 1));
+            kittenPicsAppear();
+        }, 1000 * (i + 1));
     })(i);
 }
 }
@@ -66,8 +66,12 @@ function toKittens() {
 document.getElementById("go").addEventListener("click", toKittens);
 
 
-
-
+function kittenPicsAppear() { 
+    var img = document.createElement('img');
+    img.id = 'standingKitten';
+    img.src = "img/standingcat.png"; 
+    document.getElementById('catBasketDiv').appendChild(img); 
+}
 
 
 
