@@ -43,7 +43,7 @@ function outputKittens(amount){
     for(var i = 0; i <amount; i++){
     (function(i){
         setTimeout(function(){
-            kittenPicsAppear();
+            kittenPicsAppear(amount);
         }, 1000 * (i + 1));
     })(i);
 }
@@ -60,20 +60,27 @@ function toKittens() {
   
   outputKittens(kittens);
   
+  clearBox();
 }
 
 /* Listens for the event of the Go button being clicked and calls the toKittens function */
 document.getElementById("go").addEventListener("click", toKittens);
 
 
-function kittenPicsAppear() { 
+function kittenPicsAppear(amount) { 
+    width = 280 / amount;
     var img = document.createElement('img');
     img.id = 'standingKitten';
     img.src = "img/standingcat.png"; 
+    img.style.width = width + "px";
     document.getElementById('catBasketDiv').appendChild(img); 
 }
 
 
+function clearBox() {
 
-
+   $("#weightLost").on('change keyup copy paste cut', function() {
+    $('#standingKitten').remove();
+});
+};
 

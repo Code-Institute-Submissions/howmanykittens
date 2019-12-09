@@ -52,7 +52,6 @@ button {
 }
 
 #standingKitten {
-    width:75px;
     z-index: 1;
     text-align: center;
     position: relative;
