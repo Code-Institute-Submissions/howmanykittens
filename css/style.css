@@ -56,8 +56,9 @@ button {
 .kittenDiv {
     z-index: 1;
     position: relative;
+    left: 8%;
     bottom: 40%;
-    width: 100%;
+    width: 88%;
 }
 #standingKitten {
     z-index: 1;

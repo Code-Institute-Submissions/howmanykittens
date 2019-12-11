@@ -68,7 +68,7 @@ document.getElementById('go').addEventListener("click", toKittens);
 
 
 function kittenPicsAppear(amount) { 
-    width = 100 / amount;
+    width = 96 / amount;
     var img = document.createElement('img');
     img.id = 'standingKitten';
     img.src = "img/standingcat.png"; 
