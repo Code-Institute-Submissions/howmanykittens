@@ -32,7 +32,7 @@ p {
 .container {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
-    height: 500px;
+    height: 600px;
 }
 
 button {
@@ -47,16 +47,22 @@ button {
 
 #catBasket {
     position: absolute;
-    width:100%;
+    top: 20%;
+    left: 0;
+    width: 100%;
     z-index: +2;
 }
 
+.kittenDiv {
+    z-index: 1;
+    position: relative;
+    bottom: 40%;
+    width: 100%;
+}
 #standingKitten {
     z-index: 1;
     text-align: center;
     position: relative;
-    left: 15%;
-    bottom: 55%;
 }
 
 /* M E D I A  Q U E R I E S */

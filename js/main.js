@@ -64,23 +64,24 @@ function toKittens() {
 }
 
 /* Listens for the event of the Go button being clicked and calls the toKittens function */
-document.getElementById("go").addEventListener("click", toKittens);
+document.getElementById('go').addEventListener("click", toKittens);
 
 
 function kittenPicsAppear(amount) { 
-    width = 280 / amount;
+    width = 100 / amount;
     var img = document.createElement('img');
     img.id = 'standingKitten';
     img.src = "img/standingcat.png"; 
-    img.style.width = width + "px";
-    document.getElementById('catBasketDiv').appendChild(img); 
+    img.style.width = width + "%";
+    document.getElementById('kittenDiv').appendChild(img); 
 }
 
 
 function clearBox() {
 
    $("#weightLost").on('change keyup copy paste cut', function() {
-    $('#standingKitten').remove();
+       console.log("removing")
+    $('#kittenDiv').empty();
 });
 };
 
