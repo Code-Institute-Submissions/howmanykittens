@@ -85,3 +85,6 @@ function clearBox() {
 });
 };
 
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})

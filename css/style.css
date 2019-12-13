@@ -21,6 +21,9 @@ h3 {
   color: #E60088;
 }
 
+.popover-header {
+    background-color: #f5d3e1;
+}
 /* Paragraphs */
 
 p {
@@ -37,6 +40,10 @@ p {
 
 button {
     height: 38px;
+}
+
+.btn {
+    font-size: inherit;
 }
  
 .numberBoxRow{
@@ -64,6 +71,10 @@ button {
     z-index: 1;
     text-align: center;
     position: relative;
+}
+
+.fas {
+    color: #f5f7f3;
 }
 
 /* M E D I A  Q U E R I E S */
