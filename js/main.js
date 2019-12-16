@@ -38,13 +38,26 @@ function kittenTimings(func) {
 
 }
 
+var changed = false;
+
+// document.getElementById("weightLost").addEventListener('input', function (evt) {
+//     changed = true;
+// });
+
 /*For loop to produce kittens*/
 function outputKittens(amount){
+    changed = false;
     for(var i = 0; i <amount; i++){
     (function(i){
-        setTimeout(function(){
-            kittenPicsAppear(amount);
-        }, 1000 * (i + 1));
+        if (!changed) {
+                        setTimeout(function(){
+                            kittenPicsAppear(amount);
+                            console.log("event");
+                        }, 1000 * (i + 1));
+                        
+        } else {
+            break
+        }
     })(i);
 }
 }
@@ -66,7 +79,7 @@ function toKittens() {
 /* Listens for the event of the Go button being clicked and calls the toKittens function */
 document.getElementById('go').addEventListener("click", toKittens);
 
-
+/*Makes kitten image appear in basket div */
 function kittenPicsAppear(amount) { 
     width = 96 / amount;
     var img = document.createElement('img');
@@ -76,15 +89,18 @@ function kittenPicsAppear(amount) {
     document.getElementById('kittenDiv').appendChild(img); 
 }
 
-
+/*Clears basket if input is altered */
 function clearBox() {
 
    $("#weightLost").on('change keyup copy paste cut', function() {
        console.log("removing")
+       outputKittens().return;
     $('#kittenDiv').empty();
 });
 };
 
+/* Initiate Popover */
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
+

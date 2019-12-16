@@ -36,6 +36,7 @@ p {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     height: 600px;
+    border-radius: 25px;
 }
 
 button {
@@ -77,6 +78,39 @@ button {
     color: #f5f7f3;
 }
 
+.fa-github-alt .fa-linkedin{
+color: #f5f7f3;
+font-size: 20px;
+}
+
+.fab:hover {
+    color: #e60088;
+}
+.fas:hover{
+    color: #e60088;
+}
+.fab {
+padding: 10px;
+}
+
+.navbar {
+    justify-items: unset;
+}
+
+#footerNav {
+    color: #f5f7f3;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+a {
+    color: inherit;
+}
+ul{
+    display: flex;
+}
+li {
+    list-style: none;
+}
 /* M E D I A  Q U E R I E S */
 
     /* Small and above */
