@@ -27,7 +27,7 @@ function calculateKittens(unit) {
 
 /* Display the result */
 function outputResult(kittens) {
-  var text = `<h3 class="display-2">That's ${kittens} kittens!</h3>`;
+  var text = `<h3 class="bigText">That's ${kittens} kittens!</h3>`;
   document.getElementById("kittenResult").innerHTML = text;
 }
 
@@ -45,24 +45,23 @@ var changed = false;
 // });
 
 /*For loop to produce kittens*/
+let count = 1;
 function outputKittens(amount){
-    changed = false;
-    for(var i = 0; i <amount; i++){
-    (function(i){
-        if (!changed) {
-                        setTimeout(function(){
-                            kittenPicsAppear(amount);
-                            console.log("event");
-                        }, 1000 * (i + 1));
-                        
-        } else {
-            break
-        }
-    })(i);
-}
+    if (!changed && amount > count) {
+        kittenPicsAppear(amount);
+        setTimeout(function(){
+            outputKittens(amount)
+            count++;
+        }, 1000);
+    } else {
+        count = 1;
+    }
 }
 /* Invokes the functions to put it all together */
 function toKittens() {
+    changed = false;
+    $('#kittenDiv').empty();
+
   var unit_selection = getUnitFromUser();
 
   var kittens = calculateKittens(unit_selection);
@@ -94,7 +93,8 @@ function clearBox() {
 
    $("#weightLost").on('change keyup copy paste cut', function() {
        console.log("removing")
-       outputKittens().return;
+       count = 1;
+       changed = true;
     $('#kittenDiv').empty();
 });
 };
