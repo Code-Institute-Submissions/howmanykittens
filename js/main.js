@@ -79,8 +79,6 @@ function toKittens() {
   outputResult(kittens);
   
   outputKittens(kittens);
-
-  ifEmpty(weight_entry);
   
   clearBox();
 }
