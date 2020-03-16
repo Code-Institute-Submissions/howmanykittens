@@ -4,10 +4,16 @@ function getUnitFromUser() {
 	return document.getElementById("inputGroupSelect04").value;
 }
 
-/* Retrieve weight entered by user */
+/* Retrieve weight entered by user, and throws an error if not */
 function getWeightFromUser() {
-  return parseInt(document.getElementById("weightLost").value);
+    if (document.getElementById("weightLost").value== 0){
+         var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
+         throw document.getElementById("kittenResult").innerHTML = text; ("Please enter a number into the Catulator!")
+    }else{
+    return parseInt(document.getElementById("weightLost").value);
 }
+}
+
 
 /* Selects kitten weight based on unit selected */
 function getKittenWeight(unit) {
@@ -62,8 +68,10 @@ function toKittens() {
     changed = false;
     $('#kittenDiv').empty();
 
+
   var unit_selection = getUnitFromUser();
 
+  var weight_entry = getWeightFromUser();
   var kittens = calculateKittens(unit_selection);
 
   console.log(kittens);
@@ -71,6 +79,8 @@ function toKittens() {
   outputResult(kittens);
   
   outputKittens(kittens);
+
+  ifEmpty(weight_entry);
   
   clearBox();
 }
@@ -102,5 +112,4 @@ function clearBox() {
 /* Initiate Popover */
 $(function () {
   $('[data-toggle="popover"]').popover()
-})
-
+});
