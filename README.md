@@ -37,10 +37,14 @@ his mum uses it as a motivator for him when he is complaining about eating a hea
 
 <h4>Wire Frames</h4>
 
-<a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe1.pdf"> Wireframe 1 </a>
-<a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe2.pdf"> Wireframe 2 </a>
-<a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe3.pdf"> Wireframe 3 </a>
-<a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe4.pdf"> Wireframe 4 </a>
+<li><a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe1.pdf"> Wireframe 1 </a></li>
+When I first started planning my project, I thought about using an API to produce random cat facts at the bottom of the page when it loaded. After discussion with my mentor, I found out that the API I had found was written in Heroku, not Javascript, so would not work for my project. Having completed my project, I can see there wouldn't have been space for it anyway.
+<li><a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe2.pdf"> Wireframe 2 </a></li>
+Another factor I thought about was how to show the kitten figure visually. In this wireframe I wrote "kitten picture (changes depending on amount). I considered the idea of using photos from google of kittens, so having a picture of 1 kitten when the result was 1 kitten, 2 kittens for 2 kittens etc... however there is a big issue with this, and that is that there is a point of diminishing returns when it comes to searching for increasing quantities of kittens in one picture! In other words, it's easy to find a picture with one, two, or three kittens in it, but finding twenty-one, twenty-two, or twenty-three kittens in one photo is pretty much impossible. 
+<li><a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe3.pdf"> Wireframe 3 </a></li>
+I also considered using animation to display my kitten result, but the type of animation I could feasibly do using Javascript wasn't the sort of animation I was after. 
+<li><a href="https://github.com/oliviatatum/howmanykittens/blob/53591a0208a98850a81a31eda638a279a6567213/wireframes/wireframe4.pdf"> Wireframe 4 </a></li>
+In this wireframe I planned how I would present the site on mobile devices. 
 
 
 
