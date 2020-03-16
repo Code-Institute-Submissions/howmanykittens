@@ -51,19 +51,57 @@ In this wireframe I planned how I would present the site on mobile devices.
 
 ----------------------------------------
 <h2><b>Features</b></h2>
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+<h3><b>Existing Features</b></h3>
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+The main feature of <i>How Many KIttens?</i> is the <b>Catulator</b>- the calculator that converts weight lost into it's kitten equivalent. To perform this calculation it uses several JavaScript functions:
 
-Features Left to Implement
-Another feature idea
-Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+<pre><ol><li>A function to retrieve the unit (lb or kg) 
+selected by the user via a drop down list</li>
+<li>A function to retrieve the number 
+entered into the data entry box by the user</li>
+<li>A function to select the weight of the kitten 
+based on the unit selected by the user (calls on 
+function 1).
+So either 0.5 if the unit was lbs, or 0.226796 if 
+the unit was kg.</li>
+<li>A function to perform the calculation, parsing 
+in the unit chosen by the user, and returning 
+<i>function2/function3(unit)</i> as an integer 
+<small>(so as not to get decimal kittens!)</small></li>
+</pre></ol>
+After the calculation is performed, it is then displayed on the screen both in text and in images. Functions are also used to achieve this:<br>
+<pre><ol><br><li>A function to display the result in text on the 
+screen, using template literals and the getElementById() 
+method to print the text inside a div in the html file.</li>
+<li>A function to produce the kitten pictures in the 
+basket div in the html file, using the createElement(img)
+method.</li>
+<li>A recursion to produce the image of a kitten one by
+one in the basket at the bottom of the screen, until 
+the result amount is reached.</li> 
+</pre>These functions now need to be called, so we also have:
+<pre><li>A function to call all the other functions.</li>
+<li>An Event Listener to listen for the event of a mouse
+  click on the "Go!" button, and call the previous function,
+  thus calling all the other functions up until now.</li>
+</pre>
+If the user wants to make a new entry in the entry box, the previous result needs to clear. So there is also a function that empties the kitten basket div when there are any of these following events in the entry box: <b>change keyup copy paste cut</b>
+
+
+<h3><b>Future Features</b></h3>
+
+A feature I would like to add in the future would be the ability to drag and drop the kittens, and have the kitten picture change in the process. So the kitten starts off sitting in the basket, but on mouseDown, it changes to a <i><b>dangling cat</b></i> image, like the cursor is holding it by its scruff. Then on mouseUp, it returns to its sitting position wherever it has been put on the screen. I think this would add an extra element of fun to the site, as the kittens would be more like virtual pets. 
+
+
+<h3><b>Technologies Used</b></h3>
+html
+css
+JavaScript
+Bootstrap
+
+
+----------------------------------------
 
 <h2><b>JQuery</b></h2>
 The project uses JQuery to simplify DOM manipulation.
