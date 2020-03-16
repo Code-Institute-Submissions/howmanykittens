@@ -1,7 +1,7 @@
 <h1 color=pink>How Many Kittens? </h1>
 <h2><i>The cutest way to visualise the amount of weight you have lost!</i></h2>
 
-<small>(See demo <a href="https://oliviatatum.github.io/howmanykittens/">here</a>)</small>
+<small>(See demo <a href="https://oliviatatum.github.io/howmanykittens/" title="How Many Kittens?" target="_blank">here</a>)</small>
 
 
 How Many Kittens? is a website for converting the amount of weight the user has lost into kittens!
@@ -95,10 +95,14 @@ A feature I would like to add in the future would be the ability to drag and dro
 
 
 <h3><b>Technologies Used</b></h3>
-html
-css
-JavaScript
-Bootstrap
+<ul>
+<li>html5</li>
+<li>css3</li>
+<li>JavaScript</li>
+<li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" title="getbootstrap" target="_blank">Bootstrap 4.3.1</a></li>
+<li><a href="https://jquery.com/" title="jQuery" target="_blank">jQuery 3.4.1</a>
+<li><a href="https://fontawesome.com/" title="FontAwesome" target="_blank">Font Awesome</a>
+</ul>
 
 
 ----------------------------------------
