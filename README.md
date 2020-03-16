@@ -96,12 +96,12 @@ A feature I would like to add in the future would be the ability to drag and dro
 
 <h3><b>Technologies Used</b></h3>
 <ul>
-<li>html5</li>
-<li>css3</li>
-<li>JavaScript</li>
-<li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" title="getbootstrap" target="_blank">Bootstrap 4.3.1</a></li>
-<li><a href="https://jquery.com/" title="jQuery" target="_blank">jQuery 3.4.1</a>
-<li><a href="https://fontawesome.com/" title="FontAwesome" target="_blank">Font Awesome</a>
+<li><h4>html5</h4></li> I used html to write the content of the site.
+<li><h4>css3</h4></li> I used css to format and style the header, footer, background, and all other elements on <i>How Many Kittens?</i>, as well as using css media queries to make the site responsive.
+<li><h4>JavaScript</h4></li>JavaScript was used in <i>How Many Kittens?</i> to create the functionality of the Catulator, as well as powering a popover featured in the header.
+<li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" title="getbootstrap" target="_blank"><h4>Bootstrap 4.3.1</h4></a></li>I used Bootstrap to help with the layout of the site, and in particular Bootstrap's grid system. I also used bootstrap's Navbar elements as the basis of my header and footer.
+<li><a href="https://jquery.com/" title="jQuery" target="_blank"><h4>jQuery 3.4.1</h4></a> jQuery is used on several occasions in my JavaScript code, such as to empty the kitten div, and to initiate the popover.
+<li><a href="https://fontawesome.com/" title="FontAwesome" target="_blank"><h4>Font Awesome</h4></a>I used Font Awesome's icons in my project, specifically the cat paw, for my popover, and the Github and LinkedIn logos to link my pages in the footer.
 </ul>
 
 
