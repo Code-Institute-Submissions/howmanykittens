@@ -8,7 +8,7 @@ function getUnitFromUser() {
 function getWeightFromUser() {
     if (document.getElementById("weightLost").value== 0){
          var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
-         throw document.getElementById("kittenResult").innerHTML = text; ("Please enter a number into the Catulator!")
+         throw document.getElementById("kittenResult").innerHTML = text; ("Please enter a number into the Catulator!");
     }else{
     return parseInt(document.getElementById("weightLost").value);
 }
@@ -16,19 +16,38 @@ function getWeightFromUser() {
 
 
 /* Selects kitten weight based on unit selected */
-function getKittenWeight(unit) {
+function getKittenWeight(unit, value) {
   var kittenW;
+  var leopardW;
+  var tigerW;
+  var lionW;
   if (unit == "lbs") {
     kittenW = 0.5; // kittenWeightInLb
+    leopardW = 1; //leopardWeightInLb
+    tigerW = 2;
+    lionW = 3;
   } else if (unit == "kg") {
     kittenW =  0.226796; // kittenWeightInKilograms
+    leopardW = 0.454;
+    tigerW= 0.907;
+    lionW = 1.361;
   }
+  if (unit == "lbs" && value >= 1 && value <= 14 || unit == "kg" && value >= 1 && value <= 6)  {
   return kittenW;
+  }else if (unit == "lbs" && value >= 15 && value <= 28 || unit == "kg" && value >= 7 && value <= 12) {
+  return leopardW;
+  }else if (unit == "lbs" && value >= 29 && value <= 42 || unit == "kg" && value >= 13 && value <= 19) {
+  return tigerW;
+  }else{
+    return lionW;
+  }
 }
+
+
 
 /* Catulator - converts user weight into kitten amount */
 function calculateKittens(unit) {
-  return parseInt(getWeightFromUser() / getKittenWeight(unit));
+  return parseInt(getWeightFromUser() / getKittenWeight(unit, getWeightFromUser()));
 }
 
 /* Display the result */
@@ -58,7 +77,7 @@ function outputKittens(amount){
         setTimeout(function(){
             outputKittens(amount)
             count++;
-        }, 1000);
+        }, 500);
     } else {
         count = 1;
     }
@@ -88,13 +107,32 @@ document.getElementById('go').addEventListener("click", toKittens);
 
 /*Makes kitten image appear in basket div */
 function kittenPicsAppear(amount) { 
+     var whichKitten;
+     var whereIsTheKitten;
+     
+    if (getKittenWeight()== 0.5||0.226796){
+        whichKitten = "standingKitten";
+        whereIsTheKitten = "img/standingcat.png"; 
+    }else if (getKittenWeight()== 1||0.454){
+        whichKitten = "standingLeopard";
+        whereIsTheKitten = "img/standingleopard.png";
+    }else if (getKittenWeight()== 2||0.907) {
+        whichKitten = "standingTiger";
+        whereIsTheKitten = "img/standingtiger.png";
+    }else{
+        whichKitten = "standingLion";
+        whereIsTheKitten = "img/standinglion.png";
+    }
     width = 96 / amount;
     var img = document.createElement('img');
-    img.id = 'standingKitten';
-    img.src = "img/standingcat.png"; 
+    img.id =  whichKitten;//'standingKitten';
+    img.src = whereIsTheKitten;//"img/standingcat.png"; 
     img.style.width = width + "%";
     document.getElementById('kittenDiv').appendChild(img); 
-}
+    
+   
+
+    }
 
 /*Clears basket if input is altered */
 function clearBox() {
