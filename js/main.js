@@ -143,6 +143,7 @@ function kittenPicsAppear(amount) {
     img.id =  whichKitten;//'standingKitten';
     img.src = whereIsTheKitten;//"img/standingcat.png"; 
     img.style.width = width + "%";
+    img.style.paddingBottom = "15px";
     document.getElementById('kittenDiv').appendChild(img); 
     
    
