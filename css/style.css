@@ -84,7 +84,7 @@ button {
     bottom: 40%;
     width: 88%;
 }
-#standingKitten {
+#standingKitten #standingLeopard #standingTiger #standingLion{
     z-index: 1;
     text-align: center;
     position: relative;
