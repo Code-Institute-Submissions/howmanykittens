@@ -1,5 +1,5 @@
 
-/* Retrieve the unit selection from the user (lb/kg) */
+/* Retrieve the unit selection from the user (lb/kg) */ 
 function getUnitFromUser() {
 	return document.getElementById("inputGroupSelect04").value;
 }
@@ -8,7 +8,7 @@ function getUnitFromUser() {
 function getWeightFromUser() {
     if (document.getElementById("weightLost").value== 0){
          var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
-         throw document.getElementById("kittenResult").innerHTML = text; ("Please enter a number into the Catulator!");
+         throw document.getElementById("kittenResult").innerHTML = text("Please enter a number into the Catulator!");
     }else{
     return parseInt(document.getElementById("weightLost").value);
 }
@@ -52,9 +52,23 @@ function calculateKittens(unit) {
 
 /* Display the result */
 function outputResult(kittens) {
-  var text = `<h3 class="bigText">That's ${kittens} kittens!</h3>`;
-  document.getElementById("kittenResult").innerHTML = text;
-}
+var text;
+var unit = document.getElementById("inputGroupSelect04").value;
+var value = parseInt(document.getElementById("weightLost").value);
+     
+    if (getKittenWeight(unit, value)== 0.5||getKittenWeight(unit, value)==0.226796){
+        text = `<h3 class="bigText">That's ${kittens} kittens!</h3>`;
+    }else if (getKittenWeight(unit, value)== 1||getKittenWeight(unit, value)==0.454){
+        text = `<h3 class="bigText">That's ${kittens} leopard cubs!</h3>`;
+
+    }else if (getKittenWeight(unit, value)== 2||getKittenWeight(unit, value)==0.907) {
+        text = `<h3 class="bigText">That's ${kittens} tiger cubs!</h3>`;
+
+    }else{
+        text = `<h3 class="bigText">That's ${kittens} lion cubs!</h3>`;}
+  
+        document.getElementById("kittenResult").innerHTML = text;
+    }
 
 /* Kitten interval delay */
 function kittenTimings(func) {
@@ -90,12 +104,11 @@ function toKittens() {
 
   var unit_selection = getUnitFromUser();
 
-  var weight_entry = getWeightFromUser();
   var kittens = calculateKittens(unit_selection);
 
   console.log(kittens);
 
-  outputResult(kittens);
+  setTimeout(outputResult(kittens), 1000);
   
   outputKittens(kittens);
   
@@ -105,18 +118,20 @@ function toKittens() {
 /* Listens for the event of the Go button being clicked and calls the toKittens function */
 document.getElementById('go').addEventListener("click", toKittens);
 
-/*Makes kitten image appear in basket div */
+/*Chooses which animal and makes kitten image appear in basket div */
 function kittenPicsAppear(amount) { 
      var whichKitten;
      var whereIsTheKitten;
+     var unit = document.getElementById("inputGroupSelect04").value;
+     var value = parseInt(document.getElementById("weightLost").value);
      
-    if (getKittenWeight()== 0.5||0.226796){
+    if (getKittenWeight(unit, value)== 0.5||getKittenWeight(unit, value)==0.226796){
         whichKitten = "standingKitten";
         whereIsTheKitten = "img/standingcat.png"; 
-    }else if (getKittenWeight()== 1||0.454){
+    }else if (getKittenWeight(unit, value)== 1||getKittenWeight(unit, value)==0.454){
         whichKitten = "standingLeopard";
         whereIsTheKitten = "img/standingleopard.png";
-    }else if (getKittenWeight()== 2||0.907) {
+    }else if (getKittenWeight(unit, value)== 2||getKittenWeight(unit, value)==0.907) {
         whichKitten = "standingTiger";
         whereIsTheKitten = "img/standingtiger.png";
     }else{
