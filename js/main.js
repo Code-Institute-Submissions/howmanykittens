@@ -166,3 +166,9 @@ function clearBox() {
 $(function () {
   $('[data-toggle="popover"]').popover()
 });
+
+/*Restrict input in data box to integers only (Adapted from this tutorial: https://youtu.be/OpajusnOfYo )*/
+function integersOnly(input) {
+    var regex = /[^0-9]/gi;
+    input.value =input.value.replace(regex, "");
+}
