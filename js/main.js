@@ -1,4 +1,6 @@
 
+var theKittenWeight;
+
 /* Retrieve the unit selection from the user (lb/kg) */ 
 function getUnitFromUser() {
 	return document.getElementById("inputGroupSelect04").value;
@@ -55,18 +57,18 @@ function outputResult(kittens) {
 var text;
 var unit = document.getElementById("inputGroupSelect04").value;
 var value = parseInt(document.getElementById("weightLost").value);
+theKittenWeight = getKittenWeight(unit, value);
+var kittenType = "lion cubs";
      
-    if (getKittenWeight(unit, value)== 0.5||getKittenWeight(unit, value)==0.226796){
-        text = `<h3 class="bigText">That's ${kittens} kittens!</h3>`;
-    }else if (getKittenWeight(unit, value)== 1||getKittenWeight(unit, value)==0.454){
-        text = `<h3 class="bigText">That's ${kittens} leopard cubs!</h3>`;
+    if (theKittenWeight== 0.5||theKittenWeight==0.226796){
+        kittenType = `kittens`;
+    }if (theKittenWeight== 1||theKittenWeight==0.454){
+        kittenType = `leopard cubs`;
 
-    }else if (getKittenWeight(unit, value)== 2||getKittenWeight(unit, value)==0.907) {
-        text = `<h3 class="bigText">That's ${kittens} tiger cubs!</h3>`;
-
-    }else{
-        text = `<h3 class="bigText">That's ${kittens} lion cubs!</h3>`;}
-  
+    }if (theKittenWeight== 2||theKittenWeight==0.907) {
+        kittenType = `tiger cubs!`;
+    }
+        text = `<h3 class="bigText">That's ${kittens} ${kittenType}!</h3>`;
         document.getElementById("kittenResult").innerHTML = text;
     }
 
@@ -106,7 +108,6 @@ function toKittens() {
 
   var kittens = calculateKittens(unit_selection);
 
-  console.log(kittens);
 
   setTimeout(outputResult(kittens), 1000);
   
@@ -124,14 +125,14 @@ function kittenPicsAppear(amount) {
      var whereIsTheKitten;
      var unit = document.getElementById("inputGroupSelect04").value;
      var value = parseInt(document.getElementById("weightLost").value);
-     
-    if (getKittenWeight(unit, value)== 0.5||getKittenWeight(unit, value)==0.226796){
+     var theKittenWeight = getKittenWeight(unit, value);
+    if (theKittenWeight== 0.5||theKittenWeight==0.226796){
         whichKitten = "standingKitten";
         whereIsTheKitten = "img/standingcat.png"; 
-    }else if (getKittenWeight(unit, value)== 1||getKittenWeight(unit, value)==0.454){
+    }else if (theKittenWeight== 1||theKittenWeight==0.454){
         whichKitten = "standingLeopard";
         whereIsTheKitten = "img/standingleopard.png";
-    }else if (getKittenWeight(unit, value)== 2||getKittenWeight(unit, value)==0.907) {
+    }else if (theKittenWeight== 2||theKittenWeight==0.907) {
         whichKitten = "standingTiger";
         whereIsTheKitten = "img/standingtiger.png";
     }else{
