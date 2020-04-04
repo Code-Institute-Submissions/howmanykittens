@@ -23,12 +23,10 @@
 	<!--style.css-->
 	<link rel="stylesheet" href="css/style.css">
 
-    <!--jQuery-->
-    <script
-         src="https://code.jquery.com/jquery-3.4.1.js"
-         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-         crossorigin="anonymous">
-    </script>
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+	</script>
 
 	<!--Title-->
 	<title>How Many Kittens </title>
@@ -37,16 +35,17 @@
 	<nav class="navbar navbar-light" style="background-color: #e3c3e7;">
 		<a class="navbar-brand" href="https://oliviatatum.github.io/howmanykittens/">
 			<!--Heading-->
-			<h1>How Many Kittens? <i class="fas fa-paw pawDropdown"  style="background-color: #e3c3e7;" data-toggle="popover" data-placement="bottom" data-trigger= "click hover" data-animation= "true" title="Meow?" data-content="When you are on a weight loss journey, it can be hard to visualise the progress you have made. How
-					Many Kittens offers a fun solution to this problem! When you enter in the amount of weight you have
-					lost, our Catulator converts it into kittens!"
-                ></i></h1>
+			<h1>How Many Kittens? </h1>
 		</a>
-       
+
+
 
 
 		<!--Subheading-->
-		<h2><i>The cutest way to visualise the amount of weight you have lost!</i></h2>
+		<h2><i><i class="fas fa-paw pawDropdown"  style="background-color: #e3c3e7;" data-toggle="popover" data-placement="bottom" data-trigger= "click hover" data-animation= "true" title="Meow?" data-content="When you are on a weight loss journey, it can be hard to visualise the progress you have made. How
+					Many Kittens offers a fun solution to this problem! When you enter in the amount of weight you have
+					lost, our Catulator converts it into kittens!"
+                ></i>                The cutest way to visualise the amount of weight you have lost !</i></h2>
 	</nav>
 
 
@@ -58,90 +57,98 @@
 
 
 <body>
-    <!--R O W  1-->
+	<!--R O W  1-->
 	<div class="row">
 
-    <!--Container-Fluid-->
+		<!--Container-Fluid-->
 		<div class="container-fluid">
-        <!--Introductory Paragraph Div-->
+			<!--Introductory Paragraph Div-->
 			<div class="col-12 col-md-4">
 				<br>
 			</div>
-        <!--/Introductory Paragraph Div-->
+				<!--/Introductory Paragraph Div-->
+			</div>
+			<!--/Container-Fluid-->
 		</div>
-    <!--/Container-Fluid-->
-    </div>
-    <!--/R O W  1-->
+		<!--/R O W  1-->
 
-    <!--Container-->
-<div class="container">
+		<!--Container-->
+		<div class="container">
 
-    <!--R O W  2-->
-	<div class="row">
-        <!--Catculator Subheading Div-->
-        <div class="col-xs-10 col-md-6">
-		    <h3>How much weight have you lost?</h3>
-		</div>
-        <!--/Catculator Subheading Div-->
-    </div>
-    <!--/R O W  2-->
+			<!--R O W  2-->
+			<div class="row">
+				<!--Catculator Subheading Div-->
+				<div class="col-xs-10 col-md-6">
+					<h3>How much weight have you lost?</h3>
+				</div>
+				<!--/Catculator Subheading Div-->
+			</div>
+			<!--/R O W  2-->
 
-      <!--R O W  3-->
-    <div class="row numberBoxRow">
-      <!--Weight input number box div-->
-      <div class="input-group col-xs-6 col-md-6" id="weightEntry" >
-        <input type="number" class="form-control" id="weightLost" aria-label="Number input with dropdown button" onkeyup= "integersOnly(this)" >
-        <!--Unit Select Dropdown-->
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+			<!--R O W  3-->
+			<div class="row numberBoxRow">
+				<!--Weight input number box div-->
+				<div class="input-group col-xs-6 col-md-6" id="weightEntry">
+					<input type="number" class="form-control" id="weightLost" aria-label="Number input with dropdown button" onkeyup= "integersOnly(this)" >
+					<!--Unit Select Dropdown-->
+					<select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
           <option value="lbs">lbs</option>
           <option value="kg">kg</option>
         </select>
-        <!--/Unit Select Dropdown-->
-        <!--Go Button-->
-        <div class="input-group-append">
-          <button id="go" class="btn btn-outline-secondary" type="button">Go!</button>
-        </div>
-        <!--/Go Button-->
-      </div>
-      <div class="col-xs-12 col-md-6 " id="kittenResult"></div>
-      <!--/Weight input number box div-->
-    </div>
-    <!--/R O W  3-->
+					<!--/Unit Select Dropdown-->
+					<!--Go Button-->
+					<div class="input-group-append">
+						<button id="go" class="btn btn-outline-secondary" type="button">Go!</button>
+					</div>
+					<!--/Go Button-->
+				</div>
+				<div class="col-xs-12 col-md-6 " id="kittenResult"></div>
+				<!--/Weight input number box div-->
+			</div>
+			<!--/R O W  3-->
 
-    <!--R O W  4-->
-    <br>
-    <div class="row">
-        <div class="col-6 offset-3" id="catBasketDiv">
-            <br><div class="kittenDiv" id="kittenDiv"></div>
-            <img id="catBasket" src="img/basket.png" alt="cat basket">   
+			<!--R O W  4-->
+			<br>
+			<div class="row">
+				<div class="col-6 offset-3" id="catBasketDiv">
+					<br>
+					<div class="kittenDiv" id="kittenDiv"></div>
+					<img id="catBasket" src="img/basket.png" alt="cat basket">
         </div>
-    </div>
-    <br>
+				</div>
+				<br>
 </div>
 
-<footer>
-<nav class="navbar navbar-light fixed-bottom" id="footerNav" style="background-color: #e3c3e7;">
-<x-small>Copyright Olivia Tatum 2019</x-small>
-<ul>
-<li><a href="https://github.com/oliviatatum" target="_blank" title="Check out my GitHub for more of my work!"><i class="fab fa-github-alt"></i></a></li>
-<li><a href="https://www.linkedin.com/in/oliviatatumcodes" target="_blank" title="Connect with me on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-</ul>
-</nav>
-</footer>
+				<footer>
+					<nav class="navbar navbar-light fixed-bottom" id="footerNav" style="background-color: #e3c3e7;">
+						<x-small>Copyright Olivia Tatum 2019</x-small>
+						<ul>
+							<li><a href="https://github.com/oliviatatum" target="_blank"
+									title="Check out my GitHub for more of my work!"><i class="fab fa-github-alt"></i></a>
+							</li>
+							<li><a href="https://www.linkedin.com/in/oliviatatumcodes" target="_blank"
+									title="Connect with me on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+						</ul>
+					</nav>
+				</footer>
 
-	<!--bootstrap JS-->
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-		</script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	 </script>
+				<!--bootstrap JS-->
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+					integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+					crossorigin="anonymous">
+				</script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+					integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+					crossorigin="anonymous">
+				</script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+					integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+					crossorigin="anonymous">
+				</script>
 
-    <!-- main.js-->
+				<!-- main.js-->
 
-     <script src="js/main.js"></script>
+				<script src="js/main.js"></script>
 </body>
+
 </html>

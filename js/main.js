@@ -93,7 +93,7 @@ function outputKittens(amount){
         setTimeout(function(){
             outputKittens(amount)
             count++;
-        }, 500);
+        }, 250);
     } else {
         count = 1;
     }
@@ -109,7 +109,7 @@ function toKittens() {
   var kittens = calculateKittens(unit_selection);
 
 
-  setTimeout(outputResult(kittens), 1000);
+  setTimeout(outputResult(kittens), 100);
   
   outputKittens(kittens);
   
