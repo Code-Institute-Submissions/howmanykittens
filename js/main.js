@@ -66,7 +66,7 @@ var kittenType = "lion cubs";
         kittenType = `leopard cubs`;
 
     }if (theKittenWeight== 2||theKittenWeight==0.907) {
-        kittenType = `tiger cubs!`;
+        kittenType = `tiger cubs`;
     }
         text = `<h3 class="bigText">That's ${kittens} ${kittenType}!</h3>`;
         document.getElementById("kittenResult").innerHTML = text;
@@ -114,6 +114,7 @@ function toKittens() {
   outputKittens(kittens);
   
   clearBox();
+ 
 }
 
 /* Listens for the event of the Go button being clicked and calls the toKittens function */
@@ -147,6 +148,7 @@ function kittenPicsAppear(amount) {
     img.style.paddingBottom = "15px";
     document.getElementById('kittenDiv').appendChild(img); 
     
+    setTimeout('$("#go").removeAttr("disabled")', 5000);
    
 
     }
@@ -167,8 +169,16 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 });
 
-/*Restrict input in data box to integers only (Adapted from this tutorial: https://youtu.be/OpajusnOfYo )*/
+/* Restrict input in data box to integers only (Adapted from this tutorial: https://youtu.be/OpajusnOfYo ) */
 function integersOnly(input) {
     var regex = /[^0-9]/gi;
     input.value =input.value.replace(regex, "");
 }
+
+/* Disable the button upon pressing, then re-enables it once action is completed (found on stackoverflow: https://stackoverflow.com/questions/16715075/preventing-multiple-clicks-on-button) */
+
+$(document).ready(function () {
+    $("#go").on("click", function() {
+        $(this).attr("disabled", "disabled");
+    });
+});

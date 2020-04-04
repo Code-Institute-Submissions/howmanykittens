@@ -1,4 +1,4 @@
-<h1 color=pink>How Many Kittens? </h1>
+<h1>How Many Kittens? </h1>
 <h2><i>The cutest way to visualise the amount of weight you have lost!</i></h2>
 
 <small>(See demo <a href="https://oliviatatum.github.io/howmanykittens/" title="How Many Kittens?" target="_blank">here</a>)</small>
@@ -54,7 +54,7 @@ In this wireframe I planned how I would present the site on mobile devices.
 
 <h3><b>Existing Features</b></h3>
 
-The main feature of <i>How Many KIttens?</i> is the <b>Catulator</b>- the calculator that converts weight lost into it's kitten equivalent. To perform this calculation it uses several JavaScript functions:
+The main feature of <i>How Many Kittens?</i> is the <b>Catulator</b>- the calculator that converts weight lost into it's kitten equivalent. To perform this calculation it uses several JavaScript functions:
 
 <pre><ol><li>A function to retrieve the unit (lb or kg) 
 selected by the user via a drop down list</li>

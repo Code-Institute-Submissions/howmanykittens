@@ -20,6 +20,10 @@ h1 {
     font-size: 32px;
 }
 
+h1:hover {
+    color: #eceeea;
+}
+
 h2 {
 font-family: 'Gloria Hallelujah', cursive; 
 color: #f5f7f3;
