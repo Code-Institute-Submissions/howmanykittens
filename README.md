@@ -115,19 +115,21 @@ The project uses JQuery to simplify DOM manipulation.
 <a href="https://github.com/oliviatatum/howmanykittens/blob/193a50d0dc729c51315beb5aacd8d4fa69f9f55c/manualTestingHowManyKittens.pdf">Manual testing documentation</a> 
 
 <h2><b>Deployment</b></h2>
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+I used GitHub Pages to deploy my demo page, by going into the setting on my <i>HowManyKittens</i> page, scrolling down to GitHub Pages, selecting the master branch, and clicking deploy.
 
 <h2><b>Credits</b></h2>
-Content
-The text for section Y was copied from the Wikipedia article Z
-Media
-The photos used in this site were obtained from ...
-Acknowledgements
-I received inspiration for this project from X
+
+<b>Content</b><br>
+
+All text content <i>How Many Kittens?</i> was written by me.<br><br>
+<b>Media</b><br>
+
+The paws background was created by my friend and artist, <a href="https://charliebryan.co.uk/">Charlie Bryan</a>.<br>
+All other art was drawn by me, using <a href="https://huion.uk/">Huion Inspiroy h320m</a> drawing tablet and <a href="https://krita.org/en/">Krita</a> open source drawing program. <br>
+
+<b>Acknowledgements</b><br>
+
+Big thank you to all the tutoring team at Code Institute for their continuous patience and guidance in helping me get my head around JavaScript.<br>
+Big thank you as well to my mentor Brian Macharia for his enthusiasm and support.
+
+
