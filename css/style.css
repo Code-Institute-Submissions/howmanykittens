@@ -12,15 +12,21 @@ body {
     background-image: url("../img/pawsfinal4.jpg");
     
 }   
+.navbar-light .navbar-brand {
+    color: #f5f7f3;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 32px;
+    
+}
 
 /*  headings  */
-h1 {
+h1  {
     color: #f5f7f3;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 32px;
 }
 
-h1:hover {
+.navbar-light .navbar-brand:hover {
     color: #eceeea;
 }
 
@@ -153,7 +159,7 @@ li {
 
 @media (min-width: 576px) {
 
-    h1 {
+    .navbar-light .navbar-brand {
         font-size: 32px;
     }
 
@@ -181,7 +187,7 @@ li {
     /*...........Medium and above.......................*/ 
 @media (min-width: 768px) {
 
-    h1 {
+    .navbar-light .navbar-brand {
         font-size: 36px;
     }
 
@@ -210,7 +216,7 @@ li {
     /* Large and above */ 
 @media (min-width: 992px) {
 
-    h1 {
+    .navbar-light .navbar-brand {
         font-size: 40px;
     }
 
@@ -225,7 +231,7 @@ li {
     .container {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
-    height: 680px;
+    height: 600px;
     border-radius: 25px;
     }
     @media (min-height: 1024px) {
@@ -239,10 +245,12 @@ li {
     /* Extra Large */
 @media (min-width: 1200px) {
 
-    h1 {
+    .navbar-light .navbar-brand {
         font-size: 44px;
     }   
-
+    h1 {
+        font-size: 44px;
+    }
     h2 {
         font-size: 36px;
     }
@@ -254,7 +262,7 @@ li {
     .container {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
-    height: 600px;
+    height: 680px;
     border-radius: 25px;
     }
     @media (min-height: 1024px) {
