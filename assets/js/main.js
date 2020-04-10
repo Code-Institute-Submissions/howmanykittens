@@ -129,16 +129,16 @@ function kittenPicsAppear(amount) {
      var theKittenWeight = getKittenWeight(unit, value);
     if (theKittenWeight== 0.5||theKittenWeight==0.226796){
         whichKitten = "standingKitten";
-        whereIsTheKitten = "img/standingcat.png"; 
+        whereIsTheKitten = "assets/img/standingcat.png"; 
     }else if (theKittenWeight== 1||theKittenWeight==0.454){
         whichKitten = "standingLeopard";
-        whereIsTheKitten = "img/standingleopard.png";
+        whereIsTheKitten = "assets/img/standingleopard.png";
     }else if (theKittenWeight== 2||theKittenWeight==0.907) {
         whichKitten = "standingTiger";
-        whereIsTheKitten = "img/standingtiger.png";
+        whereIsTheKitten = "assets/img/standingtiger.png";
     }else{
         whichKitten = "standingLion";
-        whereIsTheKitten = "img/standinglion.png";
+        whereIsTheKitten = "assets/img/standinglion.png";
     }
     width = 96 / amount;
     var img = document.createElement('img');
