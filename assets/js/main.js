@@ -9,11 +9,33 @@ function getUnitFromUser() {
 /* Retrieve weight entered by user, and throws an error if not */
 function getWeightFromUser() {
     var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
-    if (document.getElementById('weightLost').value== 0){
-            throw document.getElementById('kittenResult').innerHTML = text;
-    }else{
-    return parseInt(document.getElementById('weightLost').value);
-}
+    // try {
+    //     if (document.getElementById('weightLost').value == 0){
+    //         var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
+    //         document.getElementById('kittenResult').innerHTML = text
+    //         throw new error (NotAValidNumber, "please enter a valid number")
+    //     }
+        
+    // } catch (error) {
+    //     console.log("error has occurred "+ error)
+    // } finally {
+    //     return parseInt(document.getElementById('weightLost').value);
+    // }
+
+    try {
+    
+        let userInput = document.getElementById('weightLost').value;
+        if (isNaN(userInput) || userInput == 0 ) {
+            var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
+            document.getElementById('kittenResult').innerHTML = text
+            throw new error (NotAValidNumber, "please enter a valid number")
+        }
+        
+    } catch (error) {
+        console.log("error has occurred "+ error)
+    } finally {
+        return parseInt(document.getElementById('weightLost').value);
+    }
 }
 
 
@@ -89,6 +111,7 @@ var changed = false;
 let count = 1;
 function outputKittens(amount){
     if (!changed && amount > count) {
+        $('#go').attr("disabled", true);
         kittenPicsAppear(amount);
         setTimeout(function(){
             outputKittens(amount)
@@ -96,25 +119,57 @@ function outputKittens(amount){
         }, 250);
     } else {
         count = 1;
+        $('#go').removeAttr("disabled");
     }
 }
+
+
+function checkinput() {
+
+    let userInput = document.getElementById('weightLost').value;
+    
+    if (userInput == 0 ) {
+        $("#go").prop('disabled', false);
+        document.getElementById('kittenResult').innerHTML = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
+        return false;
+    }
+
+    return true;
+}
+
 /* Invokes the functions to put it all together */
 function toKittens() {
+
+    // document.getElementById("go").disabled = true;
+    // $('#go').prop('disabled', true);
+    // $('#go').attr('disabled', true);
+
+    // Check input first :
+    if (!checkinput()) {
+        return;
+    }
+
     changed = false;
     $('#kittenDiv').empty();
 
+    var unit_selection = getUnitFromUser();
 
-  var unit_selection = getUnitFromUser();
-
-  var kittens = calculateKittens(unit_selection);
+    var kittens = calculateKittens(unit_selection);
 
 
-  setTimeout(outputResult(kittens), 100);
-  
-  outputKittens(kittens);
-  
-  clearBox();
- 
+    setTimeout(outputResult(kittens), 100);
+    
+    outputKittens(kittens);
+
+    
+    clearBox();
+
+    // $('#go').prop('disabled', false);
+    // $('#go').removeAttr("disabled");
+    
+    // document.getElementById("go").disabled = false;
+    
+
 }
 
 /* Listens for the event of the Go button being clicked and calls the toKittens function */
@@ -148,7 +203,7 @@ function kittenPicsAppear(amount) {
     img.style.paddingBottom = '15px';
     document.getElementById('kittenDiv').appendChild(img); 
     
-    setTimeout('$("#go").removeAttr("disabled")', 5000);
+    // setTimeout('$("#go").removeAttr("disabled")', 5000);
    
 
     }
@@ -157,7 +212,6 @@ function kittenPicsAppear(amount) {
 function clearBox() {
 
    $('#weightLost').on('change keyup copy paste cut', function() {
-       console.log('removing')
        count = 1;
        changed = true;
     $('#kittenDiv').empty();
@@ -180,8 +234,9 @@ function integersOnly(input) {
 
 /* Disable the button upon pressing, then re-enables it once action is completed (found on stackoverflow: https://stackoverflow.com/questions/16715075/preventing-multiple-clicks-on-button) */
 
-$(document).ready(function () {
-    $('#go').on('click', function() {
-        $(this).attr('disabled', 'disabled');
-    });
-});
+//$(document).ready(function () {
+   //$('#go').on('click', function() {
+     //  $('#go').attr('disabled', 'disabled');
+    //});
+//});
+
