@@ -1,4 +1,3 @@
-
 var theKittenWeight; //global variable as theKittenWeight is used in more than one function (suggested by Stephen CI)
 
 /* Retrieve the unit selection from the user (lb/kg) */ 
@@ -132,6 +131,11 @@ function checkinput() {
         document.getElementById('kittenResult').innerHTML = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
         return false;
     }
+    if (userInput > 100) {
+        $("#go").prop('disabled', false);
+        document.getElementById('kittenResult').innerHTML = `<h3>Oops...we don't have enough cats! Please enter a smaller number into the Catulator!</h3>`;
+        return false;
+    }
 
     return true;
 }
@@ -231,7 +235,7 @@ function integersOnly(input) { //function is called within the input box in inde
 
     var regex = /[^0-9]/gi;
     input.value =input.value.replace(regex, '');
-    
+
 }
 //----------------------------------------------------------------------------------------------------------------------
 
