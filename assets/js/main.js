@@ -1,60 +1,49 @@
 
-var theKittenWeight;
+var theKittenWeight; //global variable as theKittenWeight is used in more than one function (suggested by Stephen CI)
 
 /* Retrieve the unit selection from the user (lb/kg) */ 
+
 function getUnitFromUser() {
-	return document.getElementById('inputGroupSelect04').value;
-}
 
-/* Retrieve weight entered by user, and throws an error if not */
-function getWeightFromUser() {
-    var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
-    // try {
-    //     if (document.getElementById('weightLost').value == 0){
-    //         var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
-    //         document.getElementById('kittenResult').innerHTML = text
-    //         throw new error (NotAValidNumber, "please enter a valid number")
-    //     }
-        
-    // } catch (error) {
-    //     console.log("error has occurred "+ error)
-    // } finally {
-    //     return parseInt(document.getElementById('weightLost').value);
-    // }
-
-    try {
+    return document.getElementById('inputGroupSelect04').value;
     
-        let userInput = document.getElementById('weightLost').value;
-        if (isNaN(userInput) || userInput == 0 ) {
-            var text = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
-            document.getElementById('kittenResult').innerHTML = text
-            throw new error (NotAValidNumber, "please enter a valid number")
-        }
-        
-    } catch (error) {
-        console.log("error has occurred "+ error)
-    } finally {
-        return parseInt(document.getElementById('weightLost').value);
-    }
 }
 
 
-/* Selects kitten weight based on unit selected */
-function getKittenWeight(unit, value) {
+//----------------------------------------------------------------------------------------------------------------------
+
+
+/* Retrieve weight entered by user*/  
+
+function getWeightFromUser() {
+
+        return parseInt(document.getElementById('weightLost').value);
+
+    }
+
+
+//----------------------------------------------------------------------------------------------------------------------
+
+
+/* Selects kitten weight based on unit selected and value entered */
+
+function getKittenWeight(unit, value) { //unit and value are both taken from the user input
+
   var kittenW;
   var leopardW;
   var tigerW;
   var lionW;
+
   if (unit == 'lbs') {
     kittenW = 0.5; // kittenWeightInLb
     leopardW = 1; //leopardWeightInLb
-    tigerW = 2;
-    lionW = 3;
+    tigerW = 2; //tigerWeightInLb
+    lionW = 3; //lionWeightInLb
   } else if (unit == 'kg') {
-    kittenW =  0.226796; // kittenWeightInKilograms
-    leopardW = 0.454;
-    tigerW= 0.907;
-    lionW = 1.361;
+    kittenW =  0.226796; // kittenWeightInKg
+    leopardW = 0.454; //leopardWeightInKg
+    tigerW= 0.907; //tigerWeightInKg
+    lionW = 1.361; //lionWeightInKg
   }
   if (unit == 'lbs' && value >= 1 && value <= 14 || unit == 'kg' && value >= 1 && value <= 6)  {
   return kittenW;
@@ -67,23 +56,31 @@ function getKittenWeight(unit, value) {
   }
 }
 
-
+//----------------------------------------------------------------------------------------------------------------------
 
 /* Catulator - converts user weight into kitten amount */
-function calculateKittens(unit) {
+
+function calculateKittens(unit) { //unit taken from user entry
+
   return parseInt(getWeightFromUser() / getKittenWeight(unit, getWeightFromUser()));
+
 }
 
+//----------------------------------------------------------------------------------------------------------------------
 /* Display the result */
-function outputResult(kittens) {
+
+function outputResult(kittens) { //input is taken from calculateKittens(unit_selection)
+
 var text;
 var unit = document.getElementById('inputGroupSelect04').value;
 var value = parseInt(document.getElementById('weightLost').value);
-theKittenWeight = getKittenWeight(unit, value);
 var kittenType = 'lion cubs';
+
+theKittenWeight = getKittenWeight(unit, value);
      
     if (theKittenWeight== 0.5||theKittenWeight==0.226796){
         kittenType = `kittens`;
+
     }if (theKittenWeight== 1||theKittenWeight==0.454){
         kittenType = `leopard cubs`;
 
@@ -92,38 +89,40 @@ var kittenType = 'lion cubs';
     }
         text = `<h3 class='bigText'>That's ${kittens} ${kittenType}!</h3>`;
         document.getElementById('kittenResult').innerHTML = text;
-    }
-
-/* Kitten interval delay */
-function kittenTimings(func) {
-
-    setTimeout(func, 5000);
-
 }
 
+
+//----------------------------------------------------------------------------------------------------------------------
+
+/* Recursion to produce kittens */ 
+
+//- originally this function was a for loop but a for loop would not allow
+//for the kittens to appear one by one, so changed to a recursion with assistance from tutors*/
+
 var changed = false;
-
-// document.getElementById("weightLost").addEventListener('input', function (evt) {
-//     changed = true;
-// });
-
-/*For loop to produce kittens*/
 let count = 1;
-function outputKittens(amount){
+function outputKittens(amount){ //input taken from calculateKittens(unit_selection)
+
     if (!changed && amount > count) {
+
         $('#go').attr("disabled", true);
         kittenPicsAppear(amount);
         setTimeout(function(){
             outputKittens(amount)
             count++;
         }, 250);
+
     } else {
+
         count = 1;
         $('#go').removeAttr("disabled");
+
     }
 }
 
+//----------------------------------------------------------------------------------------------------------------------
 
+/* Checks input to see if it is valid, and returns a prompt to user if not */
 function checkinput() {
 
     let userInput = document.getElementById('weightLost').value;
@@ -137,14 +136,13 @@ function checkinput() {
     return true;
 }
 
-/* Invokes the functions to put it all together */
+//----------------------------------------------------------------------------------------------------------------------
+
+
+/* Invokes the functions to put it all together (triggered onclick of Go! button)*/
+
 function toKittens() {
 
-    // document.getElementById("go").disabled = true;
-    // $('#go').prop('disabled', true);
-    // $('#go').attr('disabled', true);
-
-    // Check input first :
     if (!checkinput()) {
         return;
     }
@@ -163,25 +161,32 @@ function toKittens() {
 
     
     clearBox();
-
-    // $('#go').prop('disabled', false);
-    // $('#go').removeAttr("disabled");
-    
-    // document.getElementById("go").disabled = false;
     
 
 }
 
+//----------------------------------------------------------------------------------------------------------------------
+
+
 /* Listens for the event of the Go button being clicked and calls the toKittens function */
+
+
 document.getElementById('go').addEventListener('click', toKittens);
 
+
+//----------------------------------------------------------------------------------------------------------------------
+
+
 /*Chooses which animal and makes kitten image appear in basket div */
+
 function kittenPicsAppear(amount) { 
+
      var whichKitten;
      var whereIsTheKitten;
      var unit = document.getElementById('inputGroupSelect04').value;
      var value = parseInt(document.getElementById('weightLost').value);
      var theKittenWeight = getKittenWeight(unit, value);
+
     if (theKittenWeight== 0.5||theKittenWeight==0.226796){
         whichKitten = 'standingKitten';
         whereIsTheKitten = 'assets/img/standingcat.png'; 
@@ -195,6 +200,7 @@ function kittenPicsAppear(amount) {
         whichKitten = 'standingLion';
         whereIsTheKitten = 'assets/img/standinglion.png';
     }
+
     width = 96 / amount;
     var img = document.createElement('img');
     img.id =  whichKitten;//'standingKitten';
@@ -203,12 +209,12 @@ function kittenPicsAppear(amount) {
     img.style.paddingBottom = '15px';
     document.getElementById('kittenDiv').appendChild(img); 
     
-    // setTimeout('$("#go").removeAttr("disabled")', 5000);
-   
+}
 
-    }
+//----------------------------------------------------------------------------------------------------------------------
 
-/*Clears basket if input is altered */
+/*Clears basket if input is altered so new entry can be made */
+
 function clearBox() {
 
    $('#weightLost').on('change keyup copy paste cut', function() {
@@ -218,25 +224,27 @@ function clearBox() {
 });
 };
 
+//----------------------------------------------------------------------------------------------------------------------
+
+/* Restrict input in data box to integers only (Adapted from this tutorial: https://youtu.be/OpajusnOfYo ) */
+function integersOnly(input) { //function is called within the input box in index.html, parsing itself in using the "this" keyword 
+
+    var regex = /[^0-9]/gi;
+    input.value =input.value.replace(regex, '');
+    
+}
+//----------------------------------------------------------------------------------------------------------------------
+
 /* Initiate Popover */
+
 $(function () {
   $('[data-toggle="popover"]').popover()
 });
 
+/* Dismiss Popover */
+
 $('.popover-dismiss').popover({
   trigger: 'focus'
 })
-/* Restrict input in data box to integers only (Adapted from this tutorial: https://youtu.be/OpajusnOfYo ) */
-function integersOnly(input) {
-    var regex = /[^0-9]/gi;
-    input.value =input.value.replace(regex, '');
-}
 
-/* Disable the button upon pressing, then re-enables it once action is completed (found on stackoverflow: https://stackoverflow.com/questions/16715075/preventing-multiple-clicks-on-button) */
-
-//$(document).ready(function () {
-   //$('#go').on('click', function() {
-     //  $('#go').attr('disabled', 'disabled');
-    //});
-//});
-
+//----------------------------------------------------------------------------------------------------------------------
