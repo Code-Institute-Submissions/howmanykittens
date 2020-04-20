@@ -32,26 +32,37 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
   var leopardW;
   var tigerW;
   var lionW;
+  var pallasW;
+  var servalW;
 
   if (unit == 'lbs') {
     kittenW = 0.5; // kittenWeightInLb
     leopardW = 1; //leopardWeightInLb
     tigerW = 2; //tigerWeightInLb
     lionW = 3; //lionWeightInLb
+    pallasW = 10; //pallasWeightInLb
+    servalW = 26.45; //servalWeightInLb
+
   } else if (unit == 'kg') {
     kittenW =  0.226796; // kittenWeightInKg
     leopardW = 0.454; //leopardWeightInKg
-    tigerW= 0.907; //tigerWeightInKg
+    tigerW = 0.907; //tigerWeightInKg
     lionW = 1.361; //lionWeightInKg
+    pallasW = 4.53; //pallasWeightInKg
+    servalW = 12; //servalWeightInKg
   }
-  if (unit == 'lbs' && value >= 1 && value <= 14 || unit == 'kg' && value >= 1 && value <= 6)  {
+  if (unit == 'lbs' && value >= 1 && value <= 10 || unit == 'kg' && value >= 1 && value <= 4)  {
   return kittenW;
-  }else if (unit == 'lbs' && value >= 15 && value <= 28 || unit == 'kg' && value >= 7 && value <= 12) {
+  }else if (unit == 'lbs' && value >= 11 && value <= 20 || unit == 'kg' && value >= 5 && value <= 9) {
   return leopardW;
-  }else if (unit == 'lbs' && value >= 29 && value <= 42 || unit == 'kg' && value >= 13 && value <= 19) {
+  }else if (unit == 'lbs' && value >= 21 && value <= 30 || unit == 'kg' && value >= 10 && value <= 14) {
   return tigerW;
+  }else if (unit == 'lbs' && value >= 31 && value <= 40 || unit == 'kg' && value >= 15 && value <= 19){ 
+  return lionW;
+  }else if (unit == 'lbs' && value >= 41 && value <= 50 || unit == 'kg' && value >= 20 && value <= 24){ 
+  return pallasW;
   }else{
-    return lionW;
+  return servalW;
   }
 }
 
@@ -73,7 +84,7 @@ function outputResult(kittens) { //input is taken from calculateKittens(unit_sel
 var text;
 var unit = document.getElementById('inputGroupSelect04').value;
 var value = parseInt(document.getElementById('weightLost').value);
-var kittenType = 'lion cubs';
+var kittenType = "servals";
 
 theKittenWeight = getKittenWeight(unit, value);
      
@@ -85,6 +96,12 @@ theKittenWeight = getKittenWeight(unit, value);
 
     }if (theKittenWeight== 2||theKittenWeight==0.907) {
         kittenType = `tiger cubs`;
+    
+    }if (theKittenWeight == 3||theKittenWeight == 1.361) {
+        kittenType = `lion cubs`;
+
+    }if (theKittenWeight == 10||theKittenWeight == 4.53) {
+        kittenType = `Pallas' cats`;
     }
         text = `<h3 class='bigText'>That's ${kittens} ${kittenType}!</h3>`;
         document.getElementById('kittenResult').innerHTML = text;
@@ -109,7 +126,7 @@ function outputKittens(amount){ //input taken from calculateKittens(unit_selecti
         setTimeout(function(){
             outputKittens(amount)
             count++;
-        }, 250);
+        }, 500);
 
     } else {
 
@@ -200,9 +217,15 @@ function kittenPicsAppear(amount) {
     }else if (theKittenWeight== 2||theKittenWeight==0.907) {
         whichKitten = 'standingTiger';
         whereIsTheKitten = 'assets/img/standingtiger.png';
-    }else{
+    }else if (theKittenWeight== 3||theKittenWeight==1.361) {
         whichKitten = 'standingLion';
         whereIsTheKitten = 'assets/img/standinglion.png';
+    }else if (theKittenWeight== 10||theKittenWeight==4.53){
+        whichKitten = 'standingPallas';
+        whereIsTheKitten = 'assets/img/standingpallascat.png';
+    }else{ 
+        whichKitten = 'standingServal';
+        whereIsTheKitten = 'assets/img/standingserval.png';
     }
 
     width = 96 / amount;
