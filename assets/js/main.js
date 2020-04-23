@@ -41,6 +41,7 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
     tigerW = 2; //tigerWeightInLb
     lionW = 3; //lionWeightInLb
     pallasW = 10; //pallasWeightInLb
+    marbledW = 11; //marbledWeightInLb
     servalW = 26.45; //servalWeightInLb
 
   } else if (unit == 'kg') {
@@ -49,6 +50,7 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
     tigerW = 0.907; //tigerWeightInKg
     lionW = 1.361; //lionWeightInKg
     pallasW = 4.53; //pallasWeightInKg
+    marbledW = 4.989; //marbledWeightInKg
     servalW = 12; //servalWeightInKg
   }
   if (unit == 'lbs' && value >= 1 && value <= 10 || unit == 'kg' && value >= 1 && value <= 4)  {
@@ -61,6 +63,8 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
   return lionW;
   }else if (unit == 'lbs' && value >= 41 && value <= 50 || unit == 'kg' && value >= 20 && value <= 24){ 
   return pallasW;
+  }else if (unit == 'lbs' && value >= 51 && value <= 60 || unit == 'kg' && value >= 25 && value <= 30){ 
+  return marbledW;
   }else{
   return servalW;
   }
@@ -102,6 +106,9 @@ theKittenWeight = getKittenWeight(unit, value);
 
     }if (theKittenWeight == 10||theKittenWeight == 4.53) {
         kittenType = `Pallas' cats`;
+
+    }if (theKittenWeight == 11||theKittenWeight == 4.989) {
+        kittenType = `Marbled cats`;
     }
         text = `<h3 class='bigText'>That's ${kittens} ${kittenType}!</h3>`;
         document.getElementById('kittenResult').innerHTML = text;
@@ -148,7 +155,7 @@ function checkinput() {
         document.getElementById('kittenResult').innerHTML = `<h3>Oops! Please enter a number into the Catulator!</h3>`;
         return false;
     }
-    if (userInput > 100) {
+    if (userInput > 150) {
         $("#go").prop('disabled', false);
         document.getElementById('kittenResult').innerHTML = `<h3>Oops...we don't have enough cats! Please enter a smaller number into the Catulator!</h3>`;
         return false;
@@ -223,6 +230,9 @@ function kittenPicsAppear(amount) {
     }else if (theKittenWeight== 10||theKittenWeight==4.53){
         whichKitten = 'standingPallas';
         whereIsTheKitten = 'assets/img/standingpallascat.png';
+    }else if (theKittenWeight== 11||theKittenWeight==4.989){
+        whichKitten = 'standingMarbled';
+        whereIsTheKitten = 'assets/img/standingmarbledcat.png';
     }else{ 
         whichKitten = 'standingServal';
         whereIsTheKitten = 'assets/img/standingserval.png';
