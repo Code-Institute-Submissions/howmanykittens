@@ -136,6 +136,51 @@ function outputResult(kittens) { //input is taken from calculateKittens(unit_sel
         document.getElementById('kittenResult').innerHTML = text;
 }
 
+//----------------------------------------------------------------------------------------------------------------------
+
+
+/*Chooses which animal and makes kitten image appear in basket div */
+
+function kittenPicsAppear(amount) {
+
+     var whichKitten;
+     var whereIsTheKitten;
+     var unit = document.getElementById('inputGroupSelect04').value;
+     var value = parseInt(document.getElementById('weightLost').value);
+     var theKittenWeight = getKittenWeight(unit, value);
+
+    if (theKittenWeight== 0.5||theKittenWeight==0.226796){
+        whichKitten = 'standingKitten';
+        whereIsTheKitten = 'assets/img/standingcat.png';
+    }else if (theKittenWeight== 1||theKittenWeight==0.454){
+        whichKitten = 'standingLeopard';
+        whereIsTheKitten = 'assets/img/standingleopard.png';
+    }else if (theKittenWeight== 2||theKittenWeight==0.907) {
+        whichKitten = 'standingTiger';
+        whereIsTheKitten = 'assets/img/standingtiger.png';
+    }else if (theKittenWeight== 3||theKittenWeight==1.361) {
+        whichKitten = 'standingLion';
+        whereIsTheKitten = 'assets/img/standinglion.png';
+    }else if (theKittenWeight== 10||theKittenWeight==4.53){
+        whichKitten = 'standingPallas';
+        whereIsTheKitten = 'assets/img/standingpallascat.png';
+    }else if (theKittenWeight== 11||theKittenWeight==4.989){
+        whichKitten = 'standingMarbled';
+        whereIsTheKitten = 'assets/img/standingmarbledcat.png';
+    }else{ 
+        whichKitten = 'standingServal';
+        whereIsTheKitten = 'assets/img/standingserval.png';
+    }
+
+    var width = 96 / amount;
+    var img = document.createElement('img');
+    img.id =  whichKitten;//'standingKitten';
+    img.src = whereIsTheKitten;//"img/standingcat.png";
+    img.style.width = width + '%';
+    img.style.paddingBottom = '15px';
+    document.getElementById('kittenDiv').appendChild(img);
+
+}
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -224,51 +269,7 @@ function toKittens() {
 document.getElementById('go').addEventListener('click', toKittens);
 
 
-//----------------------------------------------------------------------------------------------------------------------
 
-
-/*Chooses which animal and makes kitten image appear in basket div */
-
-function kittenPicsAppear(amount) {
-
-     var whichKitten;
-     var whereIsTheKitten;
-     var unit = document.getElementById('inputGroupSelect04').value;
-     var value = parseInt(document.getElementById('weightLost').value);
-     var theKittenWeight = getKittenWeight(unit, value);
-
-    if (theKittenWeight== 0.5||theKittenWeight==0.226796){
-        whichKitten = 'standingKitten';
-        whereIsTheKitten = 'assets/img/standingcat.png';
-    }else if (theKittenWeight== 1||theKittenWeight==0.454){
-        whichKitten = 'standingLeopard';
-        whereIsTheKitten = 'assets/img/standingleopard.png';
-    }else if (theKittenWeight== 2||theKittenWeight==0.907) {
-        whichKitten = 'standingTiger';
-        whereIsTheKitten = 'assets/img/standingtiger.png';
-    }else if (theKittenWeight== 3||theKittenWeight==1.361) {
-        whichKitten = 'standingLion';
-        whereIsTheKitten = 'assets/img/standinglion.png';
-    }else if (theKittenWeight== 10||theKittenWeight==4.53){
-        whichKitten = 'standingPallas';
-        whereIsTheKitten = 'assets/img/standingpallascat.png';
-    }else if (theKittenWeight== 11||theKittenWeight==4.989){
-        whichKitten = 'standingMarbled';
-        whereIsTheKitten = 'assets/img/standingmarbledcat.png';
-    }else{ 
-        whichKitten = 'standingServal';
-        whereIsTheKitten = 'assets/img/standingserval.png';
-    }
-
-    var width = 96 / amount;
-    var img = document.createElement('img');
-    img.id =  whichKitten;//'standingKitten';
-    img.src = whereIsTheKitten;//"img/standingcat.png";
-    img.style.width = width + '%';
-    img.style.paddingBottom = '15px';
-    document.getElementById('kittenDiv').appendChild(img);
-
-}
 
 //----------------------------------------------------------------------------------------------------------------------
 

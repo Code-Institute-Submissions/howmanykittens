@@ -6,11 +6,12 @@
 
 How Many Kittens? is a website for converting the amount of weight the user has lost into kittens!
 It can be hard to visualise what it means to have lost 1lb, 2lb, 3lb... so How Many Kittens? provides a cute way to put the number on the scale into something easier (and cuter!) to picture.
-The user has the option of inputting their weight loss in pounds or kilograms, and then they can see the "kittens-worth" appear in a basket one by one!
+The user has the option of inputting their weight loss in pounds or kilograms, and then they can see the "kittens-worth" appear in a basket one by one! 
+And it's not just kittens... the more weight they lose, the more different cats they discover!
 
 
 <h2><b>UX</b></h2>
-Inspired by my own weight loss journey (and four cats), I wanted to make a website which would help people visualise their weightloss. 
+Inspired by my own weight loss journey (and my four cats), I wanted to make a website which would help people visualise their weightloss. 
 As such, <i>How Many Kittens?</i> is aimed at people who are trying to lose weight. <i>How Many Kittens?</i> is a cute way to envisage 
 lbs or kgs, and serves as a good motivator to continue healthy weightloss - more weight lost towards your goal = more kittens!
 
@@ -30,7 +31,8 @@ She is trying to keep things fun while making changes to help the family live a 
 Once a week Max weighs himself, and they go on <i>How Many Kittens?</i> together to see just how
 many kittens he has "won" this week. It's a fun activity that they both look forward to, and
 his mum uses it as a motivator for him when he is complaining about eating a healthy meal:
-"Are we going to get more kittens this week?".
+"Are we going to get more kittens this week?". As he reaches different milestones, he
+discovers different cats, and has fun learning about different breeds!
 
 
 </pre>
@@ -58,34 +60,51 @@ The main feature of <i>How Many Kittens?</i> is the <b>Catulator</b>- the calcul
 
 <pre><ol><li>A function to retrieve the unit (lb or kg) 
 selected by the user via a drop down list</li>
+
 <li>A function to retrieve the number 
 entered into the data entry box by the user</li>
-<li>A function to select the weight of the kitten 
-based on the unit selected by the user (calls on 
-function 1).
-So either 0.5 if the unit was lbs, or 0.226796 if 
+
+<li>A function to select both the weight and breed of the kitten 
+based on the unit selected and amount entered by the user (calls on 
+function 1 and 2).
+So if the amount entered is between 1 and 10, "kittens" would be chosen, and
+the weight would be either 0.5 if the unit was lbs, or 0.226796 if 
 the unit was kg.</li>
+
 <li>A function to perform the calculation, parsing 
 in the unit chosen by the user, and returning 
 <i>function2/function3(unit)</i> as an integer 
 <small>(so as not to get decimal kittens!)</small></li>
+
 </pre></ol>
 After the calculation is performed, it is then displayed on the screen both in text and in images. Functions are also used to achieve this:<br>
+
 <pre><ol><br><li>A function to display the result in text on the 
 screen, using template literals and the getElementById() 
-method to print the text inside a div in the html file.</li>
+method to print the text inside a div in the html file.
+A if/else function is used to choose what the content of the text says,
+based on the previous function's outcome. </li>
+
 <li>A function to produce the kitten pictures in the 
 basket div in the html file, using the createElement(img)
-method.</li>
+method. The image is chosen using an if/else if/else function
+and the weight of the cat in question (using the data from the third function).</li>
+
 <li>A recursion to produce the image of a kitten one by
 one in the basket at the bottom of the screen, until 
-the result amount is reached.</li> 
+the result amount is reached. This also temporarily disables the Go! button
+whilst the action is being performed, to prevent multiple clicks.</li> 
+
 </pre>These functions now need to be called, so we also have:
+
 <pre><li>A function to call all the other functions.</li>
+
 <li>An Event Listener to listen for the event of a mouse
   click on the "Go!" button, and call the previous function,
   thus calling all the other functions up until now.</li>
+
 </pre>
+
 If the user wants to make a new entry in the entry box, the previous result needs to clear. So there is also a function that empties the kitten basket div when there are any of these following events in the entry box: <b>change keyup copy paste cut</b>
 
 
@@ -112,16 +131,32 @@ The project uses JQuery to simplify DOM manipulation.
 
 
 <h2><b>Testing</b></h2>
+I used <a href="https://codebeautify.org/jsvalidate">CodeBeautify</a> and <a href="https://jshint.com"> jshint </a> to validate my JavaScript, <a href="https://validator.w3.org/"> W3C Markup Validation </a> 
+to validate my HTML, and <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation</a> to validate my CSS. 
+
 <a href="https://github.com/oliviatatum/howmanykittens/blob/193a50d0dc729c51315beb5aacd8d4fa69f9f55c/manualTestingHowManyKittens.pdf">Manual testing documentation</a> 
 
 <h2><b>Deployment</b></h2>
 I used GitHub Pages to deploy my demo page, by going into the setting on my <i>HowManyKittens</i> page, scrolling down to GitHub Pages, selecting the master branch, and clicking deploy.
+Throughout my project, I used git to add, commit, and push additions and alterations to GitHub. I used all these commands in the terminal. After initialising my repository using <b>git init</b>,
+I would first check what was needing to be added by entering<b>git status</b>. Then I would add it but entering <b>git add .</b>, then commit it with a message <b>git commit -m "<i>description of change/addition that I am commiting</i>"</b>. Finally I would 
+push it to my github repository. 
 
 <h2><b>Credits</b></h2>
 
 <b>Content</b><br>
 
 All text content <i>How Many Kittens?</i> was written by me.<br><br>
+The weights of the different types of cats were found on google, from various sources:
+<ul>
+<li><a href="http://members.petfinder.com/~PA16/kittenage.html">kitten weight </a></li>
+<li><a href="https://www.animalfactsencyclopedia.com/Baby-leopard.html">leopard cub weight </a></li>
+<li><a href="http://www.lairweb.org.nz/tiger/cubs3.html">tiger cub weight</a></li>
+<li><a href="http://mammalfacts.com/lion-facts.html">lion cub weight</a></li>
+<li><a href="https://g.co/kgs/gnGKvT">Pallas' cat weight</a></li>
+<li><a href="https://www.worldatlas.com/articles/the-largest-big-cats-in-the-world.html">Marbled cat weight</a></li>
+<li><a href="https://www.worldatlas.com/articles/the-largest-big-cats-in-the-world.html">Serval weight</a></li>
+</ul>
 <b>Media</b><br>
 
 The paws background was created by my friend and artist, <a href="https://charliebryan.co.uk/">Charlie Bryan</a>.<br>
