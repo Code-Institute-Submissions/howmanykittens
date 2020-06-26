@@ -306,3 +306,16 @@ $(function () {
 $('.popover-dismiss').popover({
   trigger: 'focus'
 });
+
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevClickpos = window.pageYOffset;
+window.onclick = function() {
+  var currentClickPos = window.pageYOffset;
+  if (prevClickpos > currentClickPos) {
+    document.getElementById("footerNav").style.bottom = "0";
+  } else {
+    document.getElementById("footerNav").style.bottom = "-100px";
+  }
+  prevClickpos = currentClickPos;
+}
