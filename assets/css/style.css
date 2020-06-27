@@ -70,7 +70,9 @@ p {
     border-radius: 25px;
     width: 90%;
 }
-
+.about-link {
+    text-decoration: none;
+}
 button {
     height: 38px;
 }
@@ -146,6 +148,10 @@ footer x-small {
 
 a {
     color: inherit;
+}
+.about-link:hover {
+    text-decoration: none;
+    color: #eceeea;
 }
 ul{
     display: flex;
