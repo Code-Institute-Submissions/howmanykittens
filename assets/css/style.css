@@ -233,7 +233,7 @@ p .card-text {
         line-height: 1.2;
     }
 
-    /* tall devices */
+    /* Tall Devices */
      @media (min-height: 1024px){
           .container {
                 background: rgba(255, 255, 255, 0.7);
@@ -275,7 +275,7 @@ p .card-text {
     #header-nav {
         width: 100%;
     }
-    /* tall devices */
+    /* Tall Devices */
     @media (min-height: 1024px){
           .container {
                 background: rgba(255, 255, 255, 0.7);
@@ -297,25 +297,14 @@ p .card-text {
     h2 {
         font-size: 32px;
     }
-    .bigText {
-        font-size: 5rem;
-        font-weight: 300;
-        line-height: 1.2;
-    }
 
-    .card-body {
-        margin-left: 65px;
-    }
-     .card-image {
-        text-align: left;
-        padding-bottom: 0px;
-    }
     .container {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     height: 600px;
     border-radius: 25px;
     }
+    /* Tall Devices */
     @media (min-height: 1024px) {
         .container {
             height: 900px;
@@ -336,19 +325,13 @@ p .card-text {
     h2 {
         font-size: 36px;
     }
-    .card-body {
-        margin-left: 65px;
-    }
-     .card-image {
-        text-align: left;
-        padding-bottom: 0px;
-    }
     .container {
     background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     height: 680px;
     border-radius: 25px;
     }
+    /* Tall Devices */
     @media (min-height: 1024px) {
         .container {
             height: 900px;
