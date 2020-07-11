@@ -83,7 +83,7 @@ button {
  
 .numberBoxRow{
 
-  min-height: 50%; 
+  min-height: 55%; 
   align-items: center;
 }
 
@@ -261,7 +261,7 @@ p .card-text {
         font-size: 4rem;
     }
     .bigText {
-        font-size: 5.5rem;
+        font-size: 5rem;
         font-weight: 300;
         line-height: 1.2;
     }
@@ -298,7 +298,7 @@ p .card-text {
         font-size: 32px;
     }
     .bigText {
-        font-size: 5.5rem;
+        font-size: 5rem;
         font-weight: 300;
         line-height: 1.2;
     }
@@ -335,11 +335,6 @@ p .card-text {
     }
     h2 {
         font-size: 36px;
-    }
-     .bigText {
-        font-size: 5.5rem;
-        font-weight: 300;
-        line-height: 1.2;
     }
     .card-body {
         margin-left: 65px;

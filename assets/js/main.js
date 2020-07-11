@@ -44,9 +44,9 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
         lionW,
         pallasW,
         marbledW,
-        servalW;
-        caracalW;
-        cloudedW;
+        servalW,
+        caracalW,
+        cloudedW
 
     if (unit === 'lbs') {
         kittenW = 0.5; // kittenWeightInLb
