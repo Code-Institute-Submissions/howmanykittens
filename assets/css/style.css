@@ -57,6 +57,10 @@ h3, h4 {
 }
 /* Paragraphs */
 
+.no-gutters>.col, .no-gutters>[class*=col-], .cloudedLeopardCardDiv {
+    padding-bottom: 60px;
+}
+
 p {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
@@ -72,6 +76,7 @@ p {
 }
 .about-link {
     text-decoration: none;
+    padding-bottom: 15px;
 }
 button {
     height: 38px;
@@ -144,6 +149,7 @@ font-size: 20px;
 
 footer x-small {
     vertical-align: text-top;
+    padding-bottom: 15px;
 }
 
 a {
@@ -274,6 +280,9 @@ p .card-text {
     }
     #header-nav {
         width: 100%;
+    }
+    #standingCloudedLeopard {
+        padding-bottom: 100px;
     }
     /* Tall Devices */
     @media (min-height: 1024px){
