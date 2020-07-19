@@ -14,23 +14,17 @@ body {
     overflow-x: hidden;
     
 }   
-.navbar-light .navbar-brand {
-    color: #f5f7f3;
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 32px;
-    
-}
 
-/*  headings  */
+    
+
+
+/*  h headings  */
+
 h1  {
     color: #f5f7f3;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 32px;
     text-align: center;
-}
-
-.navbar-light .navbar-brand:hover {
-    color: #eceeea;
 }
 
 h2 {
@@ -47,6 +41,19 @@ h3, h4 {
   font-weight: 200;
 }
 
+/* text */
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    color: #E60088;
+}
+
+.about-link {
+    text-decoration: none;
+    padding-bottom: 15px;
+}
+
 .bigText {
     font-size: 2.5rem;
     font-weight: 300;
@@ -59,19 +66,26 @@ h3, h4 {
     font-size: 10px;
     text-indent: 10px;
 }
+
+.navbar-light .navbar-brand {
+    color: #f5f7f3;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 32px;
+}    
+
+.navbar-light .navbar-brand:hover {
+    color: #eceeea;
+}
+
+
+
+
 .popover-header {
     background-color: #f5d3e1;
 }
-/* Paragraphs */
 
 .no-gutters>.col, .no-gutters>[class*=col-], .cloudedLeopardCardDiv {
     padding-bottom: 60px;
-}
-
-p {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
-    color: #E60088;
 }
 
 .container {
@@ -80,10 +94,6 @@ p {
     height: 440px;
     border-radius: 25px;
     width: 90%;
-}
-.about-link {
-    text-decoration: none;
-    padding-bottom: 15px;
 }
 button {
     height: 38px;
@@ -209,6 +219,22 @@ margin: 25px;
 p .card-text {
     font-weight: inherit;
 }
+.btn {
+    font: 16px "Source Sans Pro", sans-serif;
+     color: #93d6d2;
+}
+.btn-outline-secondary{
+    border: 1px solid #e3c3e7;
+}
+ .custom-select {
+    border: 1px solid #e3c3e7;
+    color: #93d6d2;
+    font: 16px"source sans pro", sans serif;
+
+} .form-control{
+    border: 1px solid #e3c3e7;
+}
+
 
  /*
   __  __   ______   _____    _____                 ____    _    _   ______   _____    _____   ______    _____ 
