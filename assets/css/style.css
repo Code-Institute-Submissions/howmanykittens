@@ -52,6 +52,13 @@ h3, h4 {
     font-weight: 300;
     line-height: 1.2;
 }
+
+.footerText {
+    color: #f5f7f3;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 10px;
+    text-indent: 10px;
+}
 .popover-header {
     background-color: #f5d3e1;
 }
@@ -120,10 +127,6 @@ button {
 
 .fa-github-alt .fa-linkedin{
 color: #f5f7f3;
-font-size: 20px;
-}
-.fab {
-    padding: 5px 10px 10px 10px;
 }
 .fab:hover {
     color: #e60088;
@@ -147,10 +150,7 @@ font-size: 20px;
     height: 40px;
 }
 
-footer x-small {
-    vertical-align: text-top;
-    padding-bottom: 15px;
-}
+
 
 a {
     color: inherit;
@@ -277,6 +277,9 @@ p .card-text {
     .card-image {
         text-align: left;
         padding-bottom: 0px;
+    }
+    .footerText {
+        font-size: 13px;
     }
     #header-nav {
         width: 100%;
