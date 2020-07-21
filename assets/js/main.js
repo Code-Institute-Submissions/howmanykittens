@@ -25,7 +25,7 @@ function getUnitFromUser() {
 function getWeightFromUser() {
 
     "use strict";
-
+    debugger;
     return parseInt(document.getElementById('weightLost').value, 10);
 
 }
@@ -38,6 +38,7 @@ function getWeightFromUser() {
 
 function getKittenWeight(unit, value) { //unit and value are both taken from the user input
     "use strict";
+  
     var kittenW,
         leopardW,
         tigerW,
@@ -46,7 +47,7 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
         marbledW,
         servalW,
         caracalW,
-        cloudedW
+        cloudedW;
 
     if (unit === 'lbs') {
         kittenW = 0.5; // kittenWeightInLb
@@ -70,6 +71,7 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
         caracalW = 13.6078; //caracalWeightInKg
         cloudedW = 22.6796; //cloudedWeightInKg
     }
+    debugger;
     if (((unit === 'lbs') && (value >= 1) && (value <= 10)) || ((unit === 'kg') && (value >= 1) && (value <= 4))) {
         return kittenW;
     }
@@ -88,13 +90,15 @@ function getKittenWeight(unit, value) { //unit and value are both taken from the
     if (((unit === 'lbs') && (value >= 51) && (value <= 60)) || ((unit === 'kg') && (value >= 25) && (value <= 29))) {
         return marbledW;
     }
-    if (((unit === 'lbs') && (value >= 61) && (value <= 70)) || ((unit === 'kg') && (value >= 30) && (value <= 34))) {
+    if (((unit === 'lbs') && (value >= 61) && (value <= 80)) || ((unit === 'kg') && (value >= 30) && (value <= 36))) {
         return servalW;
     }
-    if(((unit === 'lbs') && (value >= 71) && (value <= 80)) || ((unit === 'kg') && (value >= 35) && (value <= 39))) {
+    if (((unit === 'lbs') && (value >= 81) && (value <= 100)) || ((unit === 'kg') && (value >= 37) && (value <= 43))) {
         return caracalW;
     }
+    
     return cloudedW;
+
 }
 
 
@@ -144,11 +148,11 @@ function outputResult(kittens) { //input is taken from calculateKittens(unit_sel
         kittenType = `marbled cats`;
     
     }
-    if (theKittenWeight === 12 || theKittenWeight === 5.443) {
+    if (theKittenWeight === 26.45 || theKittenWeight === 12) {
         kittenType = `servals`;
 
     }
-    if (theKittenWeight === 13 || theKittenWeight === 5.896) {
+    if (theKittenWeight === 30 || theKittenWeight === 13.6078) {
         kittenType = `caracals`;
 
     }
@@ -168,7 +172,7 @@ function kittenPicsAppear(amount) {
      var unit = document.getElementById('inputGroupSelect04').value;
      var value = parseInt(document.getElementById('weightLost').value);
      var theKittenWeight = getKittenWeight(unit, value);
-
+    //lbs || kg
     if (theKittenWeight== 0.5||theKittenWeight==0.226796){
         whichKitten = 'standingKitten';
         whereIsTheKitten = 'assets/img/standingcat.png';
@@ -187,12 +191,12 @@ function kittenPicsAppear(amount) {
     }else if (theKittenWeight== 11||theKittenWeight==4.989){
         whichKitten = 'standingMarbled';
         whereIsTheKitten = 'assets/img/standingmarbledcat.png';
-    }else if (theKittenWeight== 12||theKittenWeight==5.443){
-        whichKitten = 'standingServal'
-        whereIsTheKitten = 'assets/img/standingserval.png'
-    }else if (theKittenWeight== 13||theKittenWeight== 5.896){
-        whichKitten = 'standingCaracal'
-        whereIsTheKitten = 'assets/img/standingcaracal.png'
+    }else if (theKittenWeight== 26.45||theKittenWeight==12){
+        whichKitten = 'standingServal';
+        whereIsTheKitten = 'assets/img/standingserval.png';
+    }else if (theKittenWeight== 30||theKittenWeight== 13.6078){
+        whichKitten = 'standingCaracal';
+        whereIsTheKitten = 'assets/img/standingcaracal.png';
     }else{ 
         whichKitten = 'standingCloudedLeopard';
         whereIsTheKitten = 'assets/img/standingcloudedleopard.png';
@@ -264,6 +268,7 @@ function checkinput() {
 
 function toKittens() {
     "use strict";
+    debugger;
     if (!checkinput()) {
         return;
     }
