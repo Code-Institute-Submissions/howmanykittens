@@ -1,18 +1,23 @@
-/* _____    _____    _____ 
-  / ____|  / ____|  / ____|
- | |      | (___   | (___  
- | |       \___ \   \___ \ 
- | |____   ____) |  ____) |
-  \_____| |_____/  |_____/ 
- */
-                           
+/*
+█▀▀ █▀ █▀
+█▄▄ ▄█ ▄█
+        */                   
 
 
+/* Grid */
 body {
      background-image: url("../img/pawsfinal4.jpg");
      font-weight: 200;
      overflow-x: hidden;
 }
+ .container {
+     background: #ffffff03;
+     padding: 10px;
+     height: 440px;
+     border-radius: 25px;
+     width: 90%;
+}
+
 /* h headings */
  h1 {
      color: #f5f7f3;
@@ -32,15 +37,33 @@ body {
      color: #E60088;
      font-weight: 200;
 }
+
 /* text */
+ a {
+     color: inherit;
+}
+ li {
+     list-style: none;
+}
  p {
      font-family: 'Source Sans Pro', sans-serif;
      font-size: 14px;
      color: #E60088;
 }
+ ul{
+     display: flex;
+}
+ .about-header {
+     margin-left: 50px;
+     font-size: 3rem;
+}
  .about-link {
      text-decoration: none;
      padding-bottom: 15px;
+}
+ .about-link:hover {
+     text-decoration: none;
+     color: #eceeea;
 }
  .bigText {
      font-size: 2.5rem;
@@ -67,29 +90,26 @@ body {
  .no-gutters>.col, .no-gutters>[class*=col-], .cloudedLeopardCardDiv {
      padding-bottom: 60px;
 }
- .container {
-     background: #ffffff03 rgba(255, 255, 255, 0.7);
-     padding: 10px;
-     height: 440px;
-     border-radius: 25px;
-     width: 90%;
-}
+
+/* Data entry box, dropdown and button */
  button {
      height: 38px;
 }
  .btn {
      font-size: inherit;
+     font: 16px "Source Sans Pro", sans-serif;
+     color: #93d6d2;
 }
- .numberBoxRow{
-     min-height: 55%;
-     align-items: center;
+ .btn-outline-secondary{
+     border: 1px solid #e3c3e7;
 }
- #catBasket {
-     position: absolute;
-     top: 20%;
-     left: 0;
-     width: 100%;
-     z-index: +2;
+ .custom-select {
+     border: 1px solid #e3c3e7;
+     color: #93d6d2;
+     font: 16px"source sans pro", sans serif;
+}
+ .form-control{
+     border: 1px solid #e3c3e7;
 }
  .kittenDiv {
      z-index: 1;
@@ -97,6 +117,19 @@ body {
      left: 8%;
      bottom: 40%;
      width: 88%;
+}
+ .numberBoxRow{
+     min-height: 55%;
+     align-items: center;
+}
+
+/* Images */ 
+#catBasket {
+     position: absolute;
+     top: 20%;
+     left: 0;
+     width: 100%;
+     z-index: +2;
 }
  #standingKitten #standingLeopard #standingTiger #standingLion{
      z-index: 1;
@@ -116,6 +149,8 @@ body {
  .fas:hover{
      color: #e60088;
 }
+
+/* Navigation */
  .navbar {
      justify-items: unset;
      padding-left: 0rem;
@@ -130,23 +165,8 @@ body {
      text-indent: 10px;
      height: 40px;
 }
- a {
-     color: inherit;
-}
- .about-link:hover {
-     text-decoration: none;
-     color: #eceeea;
-}
- ul{
-     display: flex;
-}
- li {
-     list-style: none;
-}
- .about-header {
-     margin-left: 50px;
-     font-size: 3rem;
-}
+
+/* Cards (on about page) */
  .card {
      position: initial;
      display: inline-block;
@@ -185,31 +205,13 @@ body {
  p .card-text {
      font-weight: inherit;
 }
- .btn {
-     font: 16px "Source Sans Pro", sans-serif;
-     color: #93d6d2;
-}
- .btn-outline-secondary{
-     border: 1px solid #e3c3e7;
-}
- .custom-select {
-     border: 1px solid #e3c3e7;
-     color: #93d6d2;
-     font: 16px"source sans pro", sans serif;
-}
- .form-control{
-     border: 1px solid #e3c3e7;
-}
+
  
  /*
-  __  __   ______   _____    _____                 ____    _    _   ______   _____    _____   ______    _____ 
- |  \/  | |  ____| |  __ \  |_   _|     /\        / __ \  | |  | | |  ____| |  __ \  |_   _| |  ____|  / ____|
- | \  / | | |__    | |  | |   | |      /  \      | |  | | | |  | | | |__    | |__) |   | |   | |__    | (___  
- | |\/| | |  __|   | |  | |   | |     / /\ \     | |  | | | |  | | |  __|   |  _  /    | |   |  __|    \___ \ 
- | |  | | | |____  | |__| |  _| |_   / ____ \    | |__| | | |__| | | |____  | | \ \   _| |_  | |____   ____) |
- |_|  |_| |______| |_____/  |_____| /_/    \_\    \___\_\  \____/  |______| |_|  \_\ |_____| |______| |_____/ 
-*/ 
 
+█▀▄▀█ █▀▀ █▀▄ █ ▄▀█   █▀█ █░█ █▀▀ █▀█ █ █▀▀ █▀
+█░▀░█ ██▄ █▄▀ █ █▀█   ▀▀█ █▄█ ██▄ █▀▄ █ ██▄ ▄█
+*/ 
 
 
     /*.......... Small and above.......................*/
